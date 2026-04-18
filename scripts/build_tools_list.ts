@@ -21,7 +21,7 @@ type Category = { tools: Record<string, Tool> };
 
 const data = JSON.parse(readFileSync(TOOLS_PATH, 'utf8')) as { categories: Category[] };
 const tools = data.categories.flatMap((c) =>
-	Object.entries(c.tools).map(([k, v]) => ({ package: k, execs: v.execs })),
+	Object.entries(c.tools).map(([k, v]) => ({ package: k, execs: v.execs }))
 );
 
 process.stdout.write(JSON.stringify(tools));
