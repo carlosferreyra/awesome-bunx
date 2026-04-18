@@ -23,7 +23,7 @@ type Result =
 	| { package: string; success: false; reason: string };
 
 const NETWORK_PATTERNS =
-	/(failed to fetch|connection error|could not connect|network|timeout|timed out|ssl error|certificate|http 5\d\d|503|502|504|etimedout|econnreset|econnrefused)/i;
+	/(failed to fetch|connection error|could not connect|network|timeout|timed out|ssl error|ssl.{0,20}certificate|self.signed.certificate|certificate.{0,20}(?:error|fail|invalid|expired|verify)|http 5\d\d|503|502|504|etimedout|econnreset|econnrefused)/i;
 const NOT_FOUND_PATTERNS =
 	/(\b404\b|no matching version|packagenotfound|\be404\b|no such package|failed to resolve)/i;
 const BINARY_PATTERNS =
