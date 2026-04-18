@@ -1,9 +1,5 @@
 #!/usr/bin/env -S bun run
 // @ts-nocheck
-// /// script
-// runtime = "bun >=1.1"
-// dependencies = ["nunjucks@^3.2.4"]
-// ///
 /**
  * Render README.md from tools.json using the Nunjucks template
  * at template/README.md.j2.
@@ -18,7 +14,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import nunjucks from 'nunjucks@^3.2.4';
+import nunjucks from 'nunjucks@latest';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, '..');

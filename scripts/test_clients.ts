@@ -1,9 +1,5 @@
 #!/usr/bin/env -S bun run
 // @ts-nocheck
-// /// script
-// runtime = "bun >=1.1"
-// dependencies = []
-// ///
 /**
  * Test that tools in the list are installable and executable via bunx.
  *

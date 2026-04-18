@@ -1,9 +1,5 @@
 #!/usr/bin/env -S bun run
 // @ts-nocheck
-// /// script
-// runtime = "bun >=1.1"
-// dependencies = []
-// ///
 /**
  * Post a success/failure comment on the PR after the tool-validation job runs.
  *

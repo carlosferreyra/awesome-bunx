@@ -1,9 +1,5 @@
 #!/usr/bin/env -S bun run
 // @ts-nocheck
-// /// script
-// runtime = "bun >=1.1"
-// dependencies = []
-// ///
 /**
  * Emit a JSON array of all tools in tools.json, formatted for test_clients.ts.
  *
