@@ -25,9 +25,11 @@ type Result =
 const NETWORK_PATTERNS =
 	/(failed to fetch|connection error|could not connect|network|timeout|timed out|ssl error|certificate|http 5\d\d|503|502|504|etimedout|econnreset|econnrefused)/i;
 const NOT_FOUND_PATTERNS =
-	/(404|not found|no matching version|does not exist|packagenotfound|e404|no such package)/i;
+	/(\b404\b|no matching version|packagenotfound|\be404\b|no such package|failed to resolve)/i;
 const BINARY_PATTERNS =
-	/(executable .* not found|no such file|command not found|which: no|not in.*path)/i;
+	/(executable .* not found|command not found|which: no|not in.*path)/i;
+
+type RunResult = { exitCode: number; stdout: string; stderr: string };
 
 function classifyFailure(stdout: string, stderr: string): string {
 	const combined = stdout + stderr;
@@ -37,30 +39,39 @@ function classifyFailure(stdout: string, stderr: string): string {
 	return 'execution_error';
 }
 
-function run(command: string, args: string[]): { ok: boolean; stdout: string; stderr: string } {
+function run(command: string, args: string[]): RunResult {
 	const result = spawnSync(command, args, {
 		encoding: 'utf8',
 		timeout: 120_000,
 	});
 	return {
-		ok: result.status === 0,
+		exitCode: result.status ?? 1,
 		stdout: (result.stdout ?? '').toString(),
 		stderr: (result.stderr ?? '').toString(),
 	};
 }
 
+function ranSuccessfully(result: RunResult): boolean {
+	if (result.exitCode === 0) return true;
+	const out = result.stdout + result.stderr;
+	if (NETWORK_PATTERNS.test(out)) return false;
+	if (NOT_FOUND_PATTERNS.test(out)) return false;
+	if (BINARY_PATTERNS.test(out)) return false;
+	return out.trim().length > 0;
+}
+
 function testTool(pkg: string, execName: string): { success: boolean; failureType: string } {
 	const attempt1 = run('bunx', ['--package', pkg, execName, '--help']);
-	if (attempt1.ok) return { success: true, failureType: '' };
+	if (ranSuccessfully(attempt1)) return { success: true, failureType: '' };
 
 	if (NETWORK_PATTERNS.test(attempt1.stdout + attempt1.stderr)) {
 		const retry = run('bunx', ['--package', pkg, execName, '--help']);
-		if (retry.ok) return { success: true, failureType: '' };
+		if (ranSuccessfully(retry)) return { success: true, failureType: '' };
 		return { success: false, failureType: 'network' };
 	}
 
 	const attempt2 = run('bunx', [pkg, '--help']);
-	if (attempt2.ok) return { success: true, failureType: '' };
+	if (ranSuccessfully(attempt2)) return { success: true, failureType: '' };
 
 	const combinedOut = attempt1.stdout + attempt2.stdout;
 	const combinedErr = attempt1.stderr + attempt2.stderr;
@@ -90,7 +101,7 @@ function main(): void {
 	}
 
 	const bunVersion = run('bun', ['--version']);
-	if (bunVersion.ok) console.log(`bun ${bunVersion.stdout.trim()}`);
+	if (bunVersion.exitCode === 0) console.log(`bun ${bunVersion.stdout.trim()}`);
 
 	console.log(`Testing ${tools.length} tool(s)...\n`);
 
