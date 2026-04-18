@@ -1,4 +1,3 @@
-#!/usr/bin/env -S bun run
 // @ts-nocheck
 /**
  * Fetch latest release info from the npm registry for each tool

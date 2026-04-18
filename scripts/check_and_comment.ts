@@ -1,4 +1,3 @@
-#!/usr/bin/env -S bun run
 // @ts-nocheck
 /**
  * Post a success/failure comment on the PR after the tool-validation job runs.

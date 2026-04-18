@@ -1,4 +1,3 @@
-#!/usr/bin/env -S bun run
 // @ts-nocheck
 /**
  * Render README.md from tools.json using the Nunjucks template

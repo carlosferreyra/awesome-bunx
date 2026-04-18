@@ -1,4 +1,3 @@
-#!/usr/bin/env -S bun run
 // @ts-nocheck
 /**
  * Validate tools.json against the expected schema.

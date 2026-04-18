@@ -1,4 +1,3 @@
-#!/usr/bin/env -S bun run
 // @ts-nocheck
 /**
  * Extract newly added tools from a git diff of tools.json.
