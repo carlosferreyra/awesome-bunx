@@ -6,7 +6,7 @@
 // ///
 /**
  * Render README.md from tools.json using the Nunjucks template
- * at template/README.md.jinja2.
+ * at template/README.md.j2.
  *
  * Dependencies are auto-installed by Bun on first run — see
  * https://bun.com/docs/runtime/auto-install.
@@ -24,7 +24,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, '..');
 const TOOLS_PATH = resolve(REPO_ROOT, 'tools.json');
 const TEMPLATE_DIR = resolve(REPO_ROOT, 'template');
-const TEMPLATE_NAME = 'README.md.jinja2';
+const TEMPLATE_NAME = 'README.md.j2';
 const README_PATH = resolve(REPO_ROOT, 'README.md');
 
 type Tool = {
