@@ -1,3 +1,8 @@
+#!/usr/bin/env -S bun run
+// /// script
+// runtime = "bun >=1.1"
+// dependencies = []
+// ///
 /**
  * Extract newly added tools from a git diff of tools.json.
  *

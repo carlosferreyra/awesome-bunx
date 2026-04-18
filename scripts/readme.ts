@@ -1,6 +1,14 @@
+#!/usr/bin/env -S bun run
+// /// script
+// runtime = "bun >=1.1"
+// dependencies = ["nunjucks@^3.2.4"]
+// ///
 /**
  * Render README.md from tools.json using the Nunjucks template
  * at template/README.md.jinja2.
+ *
+ * Dependencies are auto-installed by Bun on first run — see
+ * https://bun.com/docs/runtime/auto-install.
  *
  * Usage:
  *   bun run scripts/readme.ts
@@ -9,7 +17,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import nunjucks from 'nunjucks';
+import nunjucks from 'nunjucks@^3.2.4';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, '..');

@@ -8,7 +8,6 @@ on:
       - 'tools.json'
       - 'scripts/**'
       - 'template/**'
-      - 'package.json'
   schedule:
     - cron: '0 0 1 * *'
   workflow_dispatch:
@@ -29,9 +28,6 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-
-      - name: Install dependencies
-        run: bun install --frozen-lockfile || bun install
 
       - name: Validate tools.json schema
         run: bun run scripts/checks.ts

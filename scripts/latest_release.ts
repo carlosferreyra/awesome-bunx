@@ -1,3 +1,8 @@
+#!/usr/bin/env -S bun run
+// /// script
+// runtime = "bun >=1.1"
+// dependencies = []
+// ///
 /**
  * Fetch latest release info from the npm registry for each tool
  * and update tools.json in place.

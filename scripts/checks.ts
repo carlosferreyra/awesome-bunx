@@ -1,3 +1,8 @@
+#!/usr/bin/env -S bun run
+// /// script
+// runtime = "bun >=1.1"
+// dependencies = []
+// ///
 /**
  * Validate tools.json against the expected schema.
  *

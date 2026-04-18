@@ -20,9 +20,6 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Install dependencies
-        run: bun install --frozen-lockfile || bun install
-
       - name: Fetch latest release info from npm
         run: bun run scripts/latest_release.ts
 
