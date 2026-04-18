@@ -1,7 +1,7 @@
 # Awesome BUNX
 
 <div align="center">
-    <img width="500" height="350" src="https://github.com/sindresorhus/awesome/raw/main/media/logo.svg" alt="Awesome">
+    <img width="500" height="350" src="https://github.com/oven-sh/awesome-bun/blob/main/awesome-bun.png" alt="Awesome">
     <br>
     <a href="https://awesome.re">
         <img src="https://awesome.re/badge.svg" alt="Awesome">
