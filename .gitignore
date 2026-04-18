@@ -1,0 +1,54 @@
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node / Bun
+node_modules/
+dist/
+build/
+out/
+coverage/
+.nyc_output/
+*.tsbuildinfo
+
+# Bun
+.bun/
+bun.lockb
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun-debug.log*
+
+# Workflow artifacts
+checks.log
+output.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+.envrc
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk

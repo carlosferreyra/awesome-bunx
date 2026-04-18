@@ -1,0 +1,77 @@
+name: Validate Tool PR
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'tools.json'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile || bun install
+
+      - name: Validate tools.json schema
+        run: bun run scripts/checks.ts
+
+      - name: Extract added tools from diff
+        id: diff
+        run: |
+          set +e
+          TOOLS=$(bun run scripts/diff_tools.ts --base origin/main)
+          EXIT=$?
+          if [ $EXIT -eq 2 ]; then
+            echo "no_new_tools=true" >> "$GITHUB_OUTPUT"
+            echo "No new tools in this PR — schema-only change."
+          elif [ $EXIT -ne 0 ]; then
+            echo "diff_error=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "tools=$TOOLS" >> "$GITHUB_OUTPUT"
+            echo "no_new_tools=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Test new tools via bunx
+        if: steps.diff.outputs.no_new_tools != 'true' && steps.diff.outputs.diff_error != 'true'
+        id: test
+        continue-on-error: true
+        run: |
+          bun run scripts/test_clients.ts \
+            --tools '${{ steps.diff.outputs.tools }}' \
+            --output output.log
+
+      - name: Comment on PR — tool failure
+        if: steps.test.outcome == 'failure'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          ACTION: comment_failure
+        run: bun run scripts/check_and_comment.ts
+
+      - name: Auto-approve PR
+        if: steps.test.outcome == 'success' || steps.diff.outputs.no_new_tools == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          ACTION: approve
+        run: bun run scripts/check_and_comment.ts
+
+      - name: Fail job if tool tests failed
+        if: steps.test.outcome == 'failure'
+        run: exit 1

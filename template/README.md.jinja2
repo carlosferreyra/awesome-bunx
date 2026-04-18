@@ -1,0 +1,51 @@
+# Awesome BUNX
+
+<div align="center">
+    <img width="500" height="350" src="https://github.com/sindresorhus/awesome/raw/main/media/logo.svg" alt="Awesome">
+    <br>
+    <a href="https://awesome.re">
+        <img src="https://awesome.re/badge.svg" alt="Awesome">
+    </a>
+    <p>A collection of Awesome JavaScript / TypeScript CLI Tools available from BUNX/NPX.</p>
+    <p>you can use this list to find useful JavaScript and TypeScript CLI tools that are available
+    for one-off execution via <code>bunx</code> or <code>npx</code>. The list is curated and
+    maintained by the community, so feel free to contribute by adding your own favorite tools.</p>
+    <p>
+        <img src="https://img.shields.io/github/contributors/carlosferreyra/awesome-bunx" alt="Contributors">
+        <img src="https://img.shields.io/github/license/carlosferreyra/awesome-bunx" alt="License">
+        <img src="https://badges.pufler.dev/visits/carlosferreyra/awesome-bunx" alt="Visits">
+        <img src="https://img.shields.io/github/stars/carlosferreyra/awesome-bunx" alt="Stars">
+    </p>
+    <a href="https://github.com/carlosferreyra/awesome-bunx/actions/workflows/ci.yml">
+        <img src="https://github.com/carlosferreyra/awesome-bunx/actions/workflows/ci.yml/badge.svg" alt="Validation and Sync">
+    </a>
+</div>
+
+Inspired by <a href="https://github.com/carlosferreyra/awesome-uvx">awesome-uvx</a> and
+<a href="https://github.com/oven-sh/awesome-bun">awesome-bun</a>.
+
+
+{% for category in categories %}
+- [{{ category.name }}](#{{ category.slug }})
+{% endfor %}
+
+{% for category in categories %}
+## {{ category.name }}
+
+| Name | Description | Executable(s) | Latest Release |
+|:-----|:------------|:--------------|:--------------|
+{% for pkg_name, pkg in category.tools %}| [{{ pkg_name }}]({{ pkg.url }}) | {{ pkg.description }}{% if pkg.examples %}<br><details><summary><strong><a href="#">Examples</a></strong></summary>{% for ex in pkg.examples %}<br>`{{ ex.cmd | escape_pipe }}`{% if ex.description %} — {{ ex.description }}{% endif %}{% endfor %}<br></details>{% endif %} | {% for exec in pkg.execs %}```{{ exec }}```{% if not loop.last %}, {% endif %}{% endfor %} | {% if pkg.version %}{{ pkg.version }}<br>{{ pkg.last_release }}{% else %}—{% endif %} |
+{% endfor %}
+
+{% endfor %}
+
+## Contributing
+
+Feel free to contribute by opening a pull request with your favorite JavaScript / TypeScript CLI
+tools that can be run via `bunx` or `npx`!
+Please make sure to follow the <a href="CONTRIBUTING.md">contribution guidelines</a> and adhere to the <a href="CODE_OF_CONDUCT.md">code of conduct</a>.
+Please also check the <a href="https://github.com/carlosferreyra/awesome-bunx/issues">issues</a> for any open issues or discussions related to the project.
+
+## License
+
+This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.

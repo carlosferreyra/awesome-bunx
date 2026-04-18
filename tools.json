@@ -1,0 +1,969 @@
+{
+  "categories": [
+    {
+      "name": "Build Tools & Bundlers",
+      "slug": "build-tools-and-bundlers",
+      "tools": {
+        "esbuild": {
+          "description": "Extremely fast JavaScript and CSS bundler and minifier",
+          "url": "https://esbuild.github.io/",
+          "execs": [
+            "esbuild"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx esbuild src/index.ts --bundle --outfile=dist/bundle.js",
+              "description": "Bundle a TypeScript entry into a single JS file"
+            }
+          ],
+          "version": "0.28.0",
+          "last_release": "2026-04-02"
+        },
+        "parcel": {
+          "description": "Zero-configuration build tool for the web",
+          "url": "https://parceljs.org/",
+          "execs": [
+            "parcel"
+          ],
+          "version": "2.16.4",
+          "last_release": "2026-02-02"
+        },
+        "rollup": {
+          "description": "Next-generation module bundler for JavaScript libraries",
+          "url": "https://rollupjs.org/",
+          "execs": [
+            "rollup"
+          ],
+          "version": "4.60.2",
+          "last_release": "2026-04-18"
+        },
+        "tsup": {
+          "description": "Bundle TypeScript libraries with zero config, powered by esbuild",
+          "url": "https://tsup.egoist.dev/",
+          "execs": [
+            "tsup"
+          ],
+          "version": "8.5.1",
+          "last_release": "2025-11-12"
+        },
+        "vite": {
+          "description": "Next generation frontend tooling — instant dev server and optimized builds",
+          "url": "https://vitejs.dev/",
+          "execs": [
+            "vite"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx vite",
+              "description": "Start the Vite dev server in the current project"
+            },
+            {
+              "cmd": "bunx vite build",
+              "description": "Produce a production build"
+            }
+          ],
+          "version": "8.0.8",
+          "last_release": "2026-04-09"
+        }
+      }
+    },
+    {
+      "name": "Code Quality & Linters",
+      "slug": "code-quality-and-linters",
+      "tools": {
+        "@biomejs/biome": {
+          "description": "Fast formatter and linter for JavaScript, TypeScript, JSON and more",
+          "url": "https://biomejs.dev/",
+          "execs": [
+            "biome"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx --package @biomejs/biome biome check .",
+              "description": "Lint and format the current project in one pass"
+            }
+          ],
+          "version": "2.4.12",
+          "last_release": "2026-04-14"
+        },
+        "eslint": {
+          "description": "Pluggable static analyzer for JavaScript and TypeScript",
+          "url": "https://eslint.org/",
+          "execs": [
+            "eslint"
+          ],
+          "version": "10.2.1",
+          "last_release": "2026-04-17"
+        },
+        "oxlint": {
+          "description": "Fast JavaScript/TypeScript linter written in Rust",
+          "url": "https://oxc.rs/docs/guide/usage/linter.html",
+          "execs": [
+            "oxlint"
+          ],
+          "version": "1.60.0",
+          "last_release": "2026-04-13"
+        },
+        "prettier": {
+          "description": "Opinionated code formatter supporting many languages",
+          "url": "https://prettier.io/",
+          "execs": [
+            "prettier"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx prettier --write .",
+              "description": "Format every supported file in the project"
+            }
+          ],
+          "version": "3.8.3",
+          "last_release": "2026-04-15"
+        },
+        "standard": {
+          "description": "JavaScript style guide, linter, and formatter — zero config",
+          "url": "https://standardjs.com/",
+          "execs": [
+            "standard"
+          ],
+          "version": "17.1.2",
+          "last_release": "2024-09-13"
+        }
+      }
+    },
+    {
+      "name": "CSS & Styling Tools",
+      "slug": "css-and-styling-tools",
+      "tools": {
+        "autoprefixer": {
+          "description": "PostCSS plugin to parse CSS and add vendor prefixes",
+          "url": "https://github.com/postcss/autoprefixer",
+          "execs": [
+            "autoprefixer"
+          ],
+          "version": "10.5.0",
+          "last_release": "2026-04-13"
+        },
+        "postcss-cli": {
+          "description": "Command line interface for PostCSS",
+          "url": "https://github.com/postcss/postcss-cli",
+          "execs": [
+            "postcss"
+          ],
+          "version": "11.0.1",
+          "last_release": "2025-03-12"
+        },
+        "sass": {
+          "description": "Reference implementation of Sass written in Dart",
+          "url": "https://sass-lang.com/",
+          "execs": [
+            "sass"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx sass input.scss output.css",
+              "description": "Compile a Sass file to CSS"
+            }
+          ],
+          "version": "1.99.0",
+          "last_release": "2026-04-02"
+        },
+        "stylelint": {
+          "description": "Modern, powerful linter that helps you avoid errors and enforce CSS conventions",
+          "url": "https://stylelint.io/",
+          "execs": [
+            "stylelint"
+          ],
+          "version": "17.8.0",
+          "last_release": "2026-04-15"
+        },
+        "tailwindcss": {
+          "description": "Utility-first CSS framework with a standalone CLI",
+          "url": "https://tailwindcss.com/",
+          "execs": [
+            "tailwindcss"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+              "description": "Watch and compile Tailwind styles to a CSS file"
+            }
+          ],
+          "version": "4.2.2",
+          "last_release": "2026-03-18"
+        }
+      }
+    },
+    {
+      "name": "Database Tools",
+      "slug": "database-tools",
+      "tools": {
+        "drizzle-kit": {
+          "description": "CLI companion for Drizzle ORM — migrations and schema management",
+          "url": "https://orm.drizzle.team/",
+          "execs": [
+            "drizzle-kit"
+          ],
+          "version": "0.31.10",
+          "last_release": "2026-03-17"
+        },
+        "knex": {
+          "description": "SQL query builder and migration tool for Node.js",
+          "url": "https://knexjs.org/",
+          "execs": [
+            "knex"
+          ],
+          "version": "3.2.9",
+          "last_release": "2026-04-03"
+        },
+        "prisma": {
+          "description": "Next-generation Node.js and TypeScript ORM with a migration CLI",
+          "url": "https://www.prisma.io/",
+          "execs": [
+            "prisma"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx prisma init",
+              "description": "Scaffold a new Prisma schema and .env"
+            },
+            {
+              "cmd": "bunx prisma migrate dev",
+              "description": "Create and apply a new development migration"
+            }
+          ],
+          "version": "7.7.0",
+          "last_release": "2026-04-07"
+        },
+        "sequelize-cli": {
+          "description": "Command-line interface for Sequelize ORM",
+          "url": "https://github.com/sequelize/cli",
+          "execs": [
+            "sequelize"
+          ],
+          "version": "6.6.5",
+          "last_release": "2026-01-05"
+        }
+      }
+    },
+    {
+      "name": "Deployment & Hosting",
+      "slug": "deployment-and-hosting",
+      "tools": {
+        "firebase-tools": {
+          "description": "Firebase command-line interface",
+          "url": "https://github.com/firebase/firebase-tools",
+          "execs": [
+            "firebase"
+          ],
+          "version": "15.15.0",
+          "last_release": "2026-04-16"
+        },
+        "netlify-cli": {
+          "description": "Netlify command-line tool for local development and deployment",
+          "url": "https://docs.netlify.com/cli/get-started/",
+          "execs": [
+            "netlify",
+            "ntl"
+          ],
+          "version": "25.0.1",
+          "last_release": "2026-04-18"
+        },
+        "serverless": {
+          "description": "Build and deploy serverless applications to any cloud",
+          "url": "https://www.serverless.com/",
+          "execs": [
+            "serverless",
+            "sls"
+          ],
+          "version": "4.34.0",
+          "last_release": "2026-04-10"
+        },
+        "sst": {
+          "description": "Build full-stack apps on your own infrastructure",
+          "url": "https://sst.dev/",
+          "execs": [
+            "sst"
+          ],
+          "version": "4.7.7",
+          "last_release": "2026-04-17"
+        },
+        "vercel": {
+          "description": "Deploy and manage projects on the Vercel platform",
+          "url": "https://vercel.com/docs/cli",
+          "execs": [
+            "vercel",
+            "vc"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx vercel",
+              "description": "Deploy the current directory to a preview URL"
+            }
+          ],
+          "version": "51.7.0",
+          "last_release": "2026-04-17"
+        },
+        "wrangler": {
+          "description": "Command-line tool for building with Cloudflare Workers and Pages",
+          "url": "https://developers.cloudflare.com/workers/wrangler/",
+          "execs": [
+            "wrangler"
+          ],
+          "version": "4.83.0",
+          "last_release": "2026-04-15"
+        }
+      }
+    },
+    {
+      "name": "Development Tools",
+      "slug": "development-tools",
+      "tools": {
+        "concurrently": {
+          "description": "Run multiple commands concurrently, with prefixed output",
+          "url": "https://github.com/open-cli-tools/concurrently",
+          "execs": [
+            "concurrently"
+          ],
+          "version": "9.2.1",
+          "last_release": "2025-08-25"
+        },
+        "cross-env": {
+          "description": "Cross-platform utility for setting environment variables",
+          "url": "https://github.com/kentcdodds/cross-env",
+          "execs": [
+            "cross-env",
+            "cross-env-shell"
+          ],
+          "version": "10.1.0",
+          "last_release": "2025-09-29"
+        },
+        "dotenv-cli": {
+          "description": "Run a command with environment variables loaded from a .env file",
+          "url": "https://github.com/entropitor/dotenv-cli",
+          "execs": [
+            "dotenv"
+          ],
+          "version": "11.0.0",
+          "last_release": "2025-10-28"
+        },
+        "nodemon": {
+          "description": "Automatically restart a Node.js app when files change",
+          "url": "https://nodemon.io/",
+          "execs": [
+            "nodemon"
+          ],
+          "version": "3.1.14",
+          "last_release": "2026-02-20"
+        },
+        "npm-run-all": {
+          "description": "Run multiple npm-scripts in parallel or sequentially",
+          "url": "https://github.com/mysticatea/npm-run-all",
+          "execs": [
+            "npm-run-all",
+            "run-p",
+            "run-s"
+          ],
+          "version": "4.1.5",
+          "last_release": "2018-11-24"
+        }
+      }
+    },
+    {
+      "name": "Documentation",
+      "slug": "documentation",
+      "tools": {
+        "@11ty/eleventy": {
+          "description": "Simpler static site generator",
+          "url": "https://www.11ty.dev/",
+          "execs": [
+            "eleventy"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx --package @11ty/eleventy eleventy --serve",
+              "description": "Build and serve an Eleventy site locally"
+            }
+          ],
+          "version": "3.1.5",
+          "last_release": "2026-03-18"
+        },
+        "typedoc": {
+          "description": "API documentation generator for TypeScript projects",
+          "url": "https://typedoc.org/",
+          "execs": [
+            "typedoc"
+          ],
+          "version": "0.28.19",
+          "last_release": "2026-04-12"
+        },
+        "vitepress": {
+          "description": "Vite-powered static site generator for technical documentation",
+          "url": "https://vitepress.dev/",
+          "execs": [
+            "vitepress"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx vitepress init",
+              "description": "Scaffold a new VitePress documentation site"
+            }
+          ],
+          "version": "1.6.4",
+          "last_release": "2025-08-05"
+        }
+      }
+    },
+    {
+      "name": "Frontend Frameworks & Tools",
+      "slug": "frontend-frameworks-and-tools",
+      "tools": {
+        "astro": {
+          "description": "All-in-one web framework for content-driven sites",
+          "url": "https://astro.build/",
+          "execs": [
+            "astro"
+          ],
+          "version": "6.1.8",
+          "last_release": "2026-04-18"
+        },
+        "create-astro": {
+          "description": "Scaffold a new Astro project",
+          "url": "https://docs.astro.build/en/install-and-setup/",
+          "execs": [
+            "create-astro"
+          ],
+          "version": "5.0.5",
+          "last_release": "2026-03-30"
+        },
+        "next": {
+          "description": "The React Framework for production-grade applications",
+          "url": "https://nextjs.org/",
+          "execs": [
+            "next"
+          ],
+          "version": "16.2.4",
+          "last_release": "2026-04-15"
+        },
+        "nuxi": {
+          "description": "Command-line interface for the Nuxt framework",
+          "url": "https://nuxt.com/docs/api/commands/",
+          "execs": [
+            "nuxi"
+          ],
+          "version": "3.34.0",
+          "last_release": "2026-03-10"
+        },
+        "sv": {
+          "description": "Official Svelte CLI — scaffold and manage SvelteKit projects",
+          "url": "https://svelte.dev/docs/cli/overview",
+          "execs": [
+            "sv"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx sv create my-app",
+              "description": "Create a new SvelteKit project"
+            }
+          ],
+          "version": "0.15.1",
+          "last_release": "2026-04-10"
+        },
+        "storybook": {
+          "description": "Build and document UI components in isolation",
+          "url": "https://storybook.js.org/",
+          "execs": [
+            "storybook"
+          ],
+          "version": "10.3.5",
+          "last_release": "2026-04-07"
+        }
+      }
+    },
+    {
+      "name": "Package Management",
+      "slug": "package-management",
+      "tools": {
+        "depcheck": {
+          "description": "Detect unused dependencies in a project",
+          "url": "https://github.com/depcheck/depcheck",
+          "execs": [
+            "depcheck"
+          ],
+          "version": "1.4.7",
+          "last_release": "2023-10-17"
+        },
+        "npkill": {
+          "description": "Find and remove node_modules directories to free disk space",
+          "url": "https://npkill.js.org/",
+          "execs": [
+            "npkill"
+          ],
+          "version": "0.12.2",
+          "last_release": "2024-06-08"
+        },
+        "npm-check": {
+          "description": "Check for outdated, incorrect and unused dependencies",
+          "url": "https://github.com/dylang/npm-check",
+          "execs": [
+            "npm-check"
+          ],
+          "version": "6.0.1",
+          "last_release": "2022-07-16"
+        },
+        "npm-check-updates": {
+          "description": "Upgrade package.json dependencies to the latest versions",
+          "url": "https://github.com/raineorshine/npm-check-updates",
+          "execs": [
+            "ncu",
+            "npm-check-updates"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx npm-check-updates -u",
+              "description": "Upgrade all dependencies in package.json to the latest"
+            }
+          ],
+          "version": "21.0.2",
+          "last_release": "2026-04-16"
+        },
+        "taze": {
+          "description": "Modern cli tool that keeps deps fresh",
+          "url": "https://github.com/antfu/taze",
+          "execs": [
+            "taze"
+          ],
+          "version": "19.11.0",
+          "last_release": "2026-04-01"
+        }
+      }
+    },
+    {
+      "name": "API & HTTP Tools",
+      "slug": "api-and-http-tools",
+      "tools": {
+        "@openapitools/openapi-generator-cli": {
+          "description": "Generate API clients, server stubs, and documentation from OpenAPI specs",
+          "url": "https://openapi-generator.tech/",
+          "execs": [
+            "openapi-generator-cli"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx --package @openapitools/openapi-generator-cli openapi-generator-cli generate -i spec.yaml -g typescript-axios -o ./client",
+              "description": "Generate a TypeScript Axios client from an OpenAPI spec"
+            }
+          ],
+          "version": "2.31.1",
+          "last_release": "2026-04-07"
+        },
+        "json-server": {
+          "description": "Full fake REST API with zero coding in seconds",
+          "url": "https://github.com/typicode/json-server",
+          "execs": [
+            "json-server"
+          ],
+          "version": "1.0.0-beta.15",
+          "last_release": "2026-03-23"
+        },
+        "newman": {
+          "description": "Command-line collection runner for Postman",
+          "url": "https://github.com/postmanlabs/newman",
+          "execs": [
+            "newman"
+          ],
+          "version": "6.2.2",
+          "last_release": "2026-01-16"
+        },
+        "swagger-cli": {
+          "description": "Validate, bundle, and manage Swagger/OpenAPI files",
+          "url": "https://github.com/APIDevTools/swagger-cli",
+          "execs": [
+            "swagger-cli"
+          ],
+          "version": "4.0.4",
+          "last_release": "2020-07-19"
+        }
+      }
+    },
+    {
+      "name": "Scaffolding & Generators",
+      "slug": "scaffolding-and-generators",
+      "tools": {
+        "create-next-app": {
+          "description": "Scaffold a new Next.js application with one command",
+          "url": "https://nextjs.org/docs/api-reference/create-next-app",
+          "execs": [
+            "create-next-app"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx create-next-app@latest my-app",
+              "description": "Create a new Next.js project named my-app"
+            }
+          ],
+          "version": "16.2.4",
+          "last_release": "2026-04-15"
+        },
+        "create-t3-app": {
+          "description": "Interactive CLI to start a typesafe Next.js app (the T3 Stack)",
+          "url": "https://create.t3.gg/",
+          "execs": [
+            "create-t3-app"
+          ],
+          "version": "7.40.0",
+          "last_release": "2025-11-05"
+        },
+        "create-vite": {
+          "description": "Scaffold a new Vite project from an interactive prompt",
+          "url": "https://vitejs.dev/guide/",
+          "execs": [
+            "create-vite"
+          ],
+          "version": "9.0.4",
+          "last_release": "2026-04-06"
+        },
+        "degit": {
+          "description": "Straightforward project scaffolding via git repository cloning",
+          "url": "https://github.com/Rich-Harris/degit",
+          "execs": [
+            "degit"
+          ],
+          "version": "2.8.4",
+          "last_release": "2021-04-01"
+        },
+        "plop": {
+          "description": "Micro-generator framework for consistent code scaffolding",
+          "url": "https://plopjs.com/",
+          "execs": [
+            "plop"
+          ],
+          "version": "4.0.5",
+          "last_release": "2026-01-22"
+        }
+      }
+    },
+    {
+      "name": "Security",
+      "slug": "security",
+      "tools": {
+        "audit-ci": {
+          "description": "Audit dependencies in CI and fail on high-severity vulnerabilities",
+          "url": "https://github.com/IBM/audit-ci",
+          "execs": [
+            "audit-ci"
+          ],
+          "version": "7.1.0",
+          "last_release": "2024-07-03"
+        },
+        "retire": {
+          "description": "Scanner detecting the use of JavaScript libraries with known vulnerabilities",
+          "url": "https://retirejs.github.io/retire.js/",
+          "execs": [
+            "retire"
+          ],
+          "version": "5.4.2",
+          "last_release": "2026-01-18"
+        },
+        "snyk": {
+          "description": "Find, fix, and monitor vulnerabilities in open source dependencies",
+          "url": "https://snyk.io/",
+          "execs": [
+            "snyk"
+          ],
+          "version": "1.1304.0",
+          "last_release": "2026-04-09"
+        }
+      }
+    },
+    {
+      "name": "Testing & Quality",
+      "slug": "testing-and-quality",
+      "tools": {
+        "cypress": {
+          "description": "End-to-end testing framework for anything that runs in a browser",
+          "url": "https://www.cypress.io/",
+          "execs": [
+            "cypress"
+          ],
+          "version": "15.14.0",
+          "last_release": "2026-04-16"
+        },
+        "jest": {
+          "description": "Delightful JavaScript testing framework with a focus on simplicity",
+          "url": "https://jestjs.io/",
+          "execs": [
+            "jest"
+          ],
+          "version": "30.3.0",
+          "last_release": "2026-03-10"
+        },
+        "mocha": {
+          "description": "Feature-rich JavaScript test framework running on Node.js",
+          "url": "https://mochajs.org/",
+          "execs": [
+            "mocha",
+            "_mocha"
+          ],
+          "version": "11.7.5",
+          "last_release": "2025-11-05"
+        },
+        "playwright": {
+          "description": "Reliable end-to-end testing across all modern browsers",
+          "url": "https://playwright.dev/",
+          "execs": [
+            "playwright"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx playwright install",
+              "description": "Install the browser binaries required by Playwright"
+            }
+          ],
+          "version": "1.59.1",
+          "last_release": "2026-04-01"
+        },
+        "vitest": {
+          "description": "Blazing fast unit-test framework powered by Vite",
+          "url": "https://vitest.dev/",
+          "execs": [
+            "vitest"
+          ],
+          "version": "4.1.4",
+          "last_release": "2026-04-09"
+        }
+      }
+    },
+    {
+      "name": "TypeScript Tools",
+      "slug": "typescript-tools",
+      "tools": {
+        "ts-node": {
+          "description": "TypeScript execution and REPL for Node.js",
+          "url": "https://typestrong.org/ts-node/",
+          "execs": [
+            "ts-node",
+            "ts-node-esm",
+            "ts-node-script",
+            "ts-node-transpile-only"
+          ],
+          "version": "10.9.2",
+          "last_release": "2023-12-08"
+        },
+        "tsx": {
+          "description": "Run TypeScript and ESM files directly — drop-in node replacement",
+          "url": "https://tsx.is/",
+          "execs": [
+            "tsx"
+          ],
+          "version": "4.21.0",
+          "last_release": "2025-11-30"
+        },
+        "typescript": {
+          "description": "TypeScript language compiler and language server",
+          "url": "https://www.typescriptlang.org/",
+          "execs": [
+            "tsc",
+            "tsserver"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx tsc --init",
+              "description": "Generate a tsconfig.json in the current directory"
+            }
+          ],
+          "version": "6.0.3",
+          "last_release": "2026-04-16"
+        }
+      }
+    },
+    {
+      "name": "Performance & Monitoring",
+      "slug": "performance-and-monitoring",
+      "tools": {
+        "clinic": {
+          "description": "Diagnose Node.js performance issues with flame graphs and heap analysis",
+          "url": "https://clinicjs.org/",
+          "execs": [
+            "clinic"
+          ],
+          "version": "13.0.0",
+          "last_release": "2023-06-28"
+        },
+        "lighthouse": {
+          "description": "Automated tool for improving quality of web pages",
+          "url": "https://developer.chrome.com/docs/lighthouse/overview",
+          "execs": [
+            "lighthouse",
+            "chrome-debug",
+            "smokehouse"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx lighthouse https://example.com --view",
+              "description": "Run an audit on a URL and open the report in the browser"
+            }
+          ],
+          "version": "13.1.0",
+          "last_release": "2026-04-06"
+        },
+        "size-limit": {
+          "description": "Keep your JavaScript and CSS bundle size small",
+          "url": "https://github.com/ai/size-limit",
+          "execs": [
+            "size-limit"
+          ],
+          "version": "12.1.0",
+          "last_release": "2026-04-13"
+        },
+        "webpack-bundle-analyzer": {
+          "description": "Visualize the size of webpack output files with an interactive treemap",
+          "url": "https://github.com/webpack-contrib/webpack-bundle-analyzer",
+          "execs": [
+            "webpack-bundle-analyzer"
+          ],
+          "version": "5.3.0",
+          "last_release": "2026-03-25"
+        }
+      }
+    },
+    {
+      "name": "Utilities",
+      "slug": "utilities",
+      "tools": {
+        "http-server": {
+          "description": "Simple, zero-configuration command-line HTTP server",
+          "url": "https://github.com/http-party/http-server",
+          "execs": [
+            "http-server",
+            "hs"
+          ],
+          "version": "14.1.1",
+          "last_release": "2022-05-31"
+        },
+        "kill-port": {
+          "description": "Kill the process bound to a given port",
+          "url": "https://github.com/tiaanduplessis/kill-port",
+          "execs": [
+            "kill-port"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx kill-port 3000",
+              "description": "Kill whatever process is listening on port 3000"
+            }
+          ],
+          "version": "2.0.1",
+          "last_release": "2022-06-21"
+        },
+        "localtunnel": {
+          "description": "Expose your localhost to the world for easy testing and sharing",
+          "url": "https://theboroer.github.io/localtunnel-www/",
+          "execs": [
+            "lt"
+          ],
+          "version": "2.0.2",
+          "last_release": "2021-09-18"
+        },
+        "npkg": {
+          "description": "Inspect packages from the npm registry from the terminal",
+          "url": "https://github.com/cutenode/npkg",
+          "execs": [
+            "npkg"
+          ],
+          "version": "0.0.6",
+          "last_release": "2011-10-04"
+        },
+        "serve": {
+          "description": "Static file serving and directory listing",
+          "url": "https://github.com/vercel/serve",
+          "execs": [
+            "serve"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx serve ./dist",
+              "description": "Serve the contents of a build directory over HTTP"
+            }
+          ],
+          "version": "14.2.6",
+          "last_release": "2026-03-03"
+        }
+      }
+    },
+    {
+      "name": "Version Control & Git",
+      "slug": "version-control-and-git",
+      "tools": {
+        "commitizen": {
+          "description": "Create commits that follow a specified format — interactive CLI",
+          "url": "https://commitizen-tools.github.io/commitizen/",
+          "execs": [
+            "cz",
+            "git-cz",
+            "commitizen"
+          ],
+          "version": "4.3.1",
+          "last_release": "2024-09-27"
+        },
+        "husky": {
+          "description": "Modern native Git hooks made easy",
+          "url": "https://typicode.github.io/husky/",
+          "execs": [
+            "husky"
+          ],
+          "version": "9.1.7",
+          "last_release": "2024-11-18"
+        },
+        "lint-staged": {
+          "description": "Run linters against staged git files",
+          "url": "https://github.com/lint-staged/lint-staged",
+          "execs": [
+            "lint-staged"
+          ],
+          "version": "16.4.0",
+          "last_release": "2026-03-14"
+        },
+        "semantic-release": {
+          "description": "Fully automated version management and package publishing",
+          "url": "https://semantic-release.gitbook.io/",
+          "execs": [
+            "semantic-release"
+          ],
+          "version": "25.0.3",
+          "last_release": "2026-01-30"
+        }
+      }
+    },
+    {
+      "name": "Miscellaneous",
+      "slug": "miscellaneous",
+      "tools": {
+        "cowsay": {
+          "description": "Configurable talking cow (and other characters) for the terminal",
+          "url": "https://github.com/piuccio/cowsay",
+          "execs": [
+            "cowsay",
+            "cowthink"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx cowsay Hello from bunx",
+              "description": "Print a cow saying a message"
+            }
+          ],
+          "version": "1.6.0",
+          "last_release": "2024-01-26"
+        },
+        "figlet-cli": {
+          "description": "Create large ASCII text banners in the terminal",
+          "url": "https://github.com/patorjk/figlet-cli",
+          "execs": [
+            "figlet"
+          ],
+          "version": "0.3.0",
+          "last_release": "2025-04-12"
+        }
+      }
+    }
+  ]
+}
