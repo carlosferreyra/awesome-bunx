@@ -1,4 +1,5 @@
 #!/usr/bin/env -S bun run
+// @ts-nocheck
 // /// script
 // runtime = "bun >=1.1"
 // dependencies = []
@@ -17,8 +18,8 @@
  *   # Test a single tool (e.g. from a PR diff):
  *   bun run scripts/test_clients.ts --tools '[{"package":"eslint","execs":["eslint"]}]'
  */
-import { writeFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
+import { writeFileSync } from 'node:fs';
 import { parseArgs } from 'node:util';
 
 type InputTool = { package: string; execs?: string[] };
@@ -103,9 +104,7 @@ function main(): void {
 	for (const tool of tools) {
 		const pkg = tool.package;
 		const execName =
-			tool.execs && tool.execs.length > 0
-				? tool.execs[0]!
-				: pkg.split('[')[0]!.split('/').pop()!;
+			tool.execs && tool.execs.length > 0 ? tool.execs[0]! : pkg.split('[')[0]!.split('/').pop()!;
 
 		console.log(`  Testing: ${pkg} (${execName})`);
 

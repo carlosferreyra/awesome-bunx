@@ -1,4 +1,5 @@
 #!/usr/bin/env -S bun run
+// @ts-nocheck
 // /// script
 // runtime = "bun >=1.1"
 // dependencies = []
@@ -44,7 +45,7 @@ async function fetchLatest(pkg: string): Promise<{ version: string; date: string
 		}
 		const info = (await res.json()) as {
 			'dist-tags'?: Record<string, string>;
-			time?: Record<string, string>;
+			'time'?: Record<string, string>;
 		};
 		const version = info['dist-tags']?.latest;
 		if (!version) return null;

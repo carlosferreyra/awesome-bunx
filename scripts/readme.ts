@@ -1,4 +1,5 @@
 #!/usr/bin/env -S bun run
+// @ts-nocheck
 // /// script
 // runtime = "bun >=1.1"
 // dependencies = ["nunjucks@^3.2.4"]

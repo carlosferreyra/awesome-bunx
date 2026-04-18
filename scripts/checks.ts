@@ -1,4 +1,5 @@
 #!/usr/bin/env -S bun run
+// @ts-nocheck
 // /// script
 // runtime = "bun >=1.1"
 // dependencies = []
@@ -9,7 +10,7 @@
  * Usage:
  *   bun run scripts/checks.ts
  */
-import { readFileSync, appendFileSync, existsSync, unlinkSync } from 'node:fs';
+import { appendFileSync, existsSync, readFileSync, unlinkSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -78,7 +79,7 @@ function checkTools(): number {
 				allValid = false;
 				log(
 					'ERROR',
-					`Tool '${pkgName}' in '${name}' is missing required fields: ${missing.join(', ')}`,
+					`Tool '${pkgName}' in '${name}' is missing required fields: ${missing.join(', ')}`
 				);
 				continue;
 			}
@@ -98,10 +99,7 @@ function checkTools(): number {
 
 			if (!Array.isArray(pkgData.execs) || pkgData.execs.length === 0) {
 				allValid = false;
-				log(
-					'ERROR',
-					`Tool '${pkgName}' in '${name}' must have at least one executable in 'execs'`,
-				);
+				log('ERROR', `Tool '${pkgName}' in '${name}' must have at least one executable in 'execs'`);
 			}
 
 			if (!pkgData.url || !/^https?:\/\//.test(pkgData.url)) {

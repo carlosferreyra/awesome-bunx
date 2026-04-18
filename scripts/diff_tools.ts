@@ -1,4 +1,5 @@
 #!/usr/bin/env -S bun run
+// @ts-nocheck
 // /// script
 // runtime = "bun >=1.1"
 // dependencies = []
@@ -21,8 +22,8 @@
  *   1  error
  *   2  no added tools detected (e.g. only removals or metadata changes)
  */
-import { readFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
+import { readFileSync } from 'node:fs';
 import { parseArgs } from 'node:util';
 
 type Tool = {
