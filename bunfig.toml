@@ -1,0 +1,6 @@
+[install]
+# Fallback: resolve from local node_modules when present, auto-install
+# anything missing. Ensures readme.ts can pull `nunjucks` on CI without a
+# package.json even if a stray node_modules shows up in the runner.
+# https://bun.com/docs/runtime/bunfig#install-auto
+auto = "fallback"
