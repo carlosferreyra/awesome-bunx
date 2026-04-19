@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
       - name: Checkout PR branch
         uses: actions/checkout@v6
@@ -24,6 +24,15 @@ jobs:
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
+
+      - name: Cache Bun package store
+        uses: actions/cache@v4
+        with:
+          path: ~/.bun/install/cache
+          key: ${{ runner.os }}-bun-tools-${{ hashFiles('tools.json') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-tools-
+            ${{ runner.os }}-bun-
 
       - name: Validate tools.json schema
         run: bun run scripts/checks.ts

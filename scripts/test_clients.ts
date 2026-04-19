@@ -28,6 +28,10 @@ const NOT_FOUND_PATTERNS =
 	/(\b404\b|no matching version|packagenotfound|\be404\b|no such package|failed to resolve)/i;
 const BINARY_PATTERNS =
 	/(executable .* not found|command not found|which: no|not in.*path)/i;
+// Matches the Node.js "spawn X ENOENT" crash that occurs when a tool treats its CLI
+// arguments as commands to execute (e.g. cross-env passes --help directly to cross-spawn).
+// In this case the tool is correctly installed; only the --help probe fails.
+const SPAWN_ENOENT_PATTERNS = /spawn\s+\S+\s+enoent/i;
 
 type RunResult = { exitCode: number; stdout: string; stderr: string };
 
@@ -64,10 +68,20 @@ function testTool(pkg: string, execName: string): { success: boolean; failureTyp
 	const attempt1 = run('bunx', ['--package', pkg, execName, '--help']);
 	if (ranSuccessfully(attempt1)) return { success: true, failureType: '' };
 
-	if (NETWORK_PATTERNS.test(attempt1.stdout + attempt1.stderr)) {
+	const out1 = attempt1.stdout + attempt1.stderr;
+
+	if (NETWORK_PATTERNS.test(out1)) {
 		const retry = run('bunx', ['--package', pkg, execName, '--help']);
 		if (ranSuccessfully(retry)) return { success: true, failureType: '' };
 		return { success: false, failureType: 'network' };
+	}
+
+	// Tools that treat every argument as a sub-command (e.g. cross-env) crash with a
+	// "spawn --help ENOENT" error when probed with --help. Fall back to a no-arg
+	// invocation: if it exits 0 the binary is installed and working correctly.
+	if (SPAWN_ENOENT_PATTERNS.test(out1)) {
+		const noArgs = run('bunx', ['--package', pkg, execName]);
+		if (noArgs.exitCode === 0) return { success: true, failureType: '' };
 	}
 
 	const attempt2 = run('bunx', [pkg, '--help']);
