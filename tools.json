@@ -62,8 +62,8 @@
               "description": "Produce a production build"
             }
           ],
-          "version": "8.0.8",
-          "last_release": "2026-04-09"
+          "version": "8.0.9",
+          "last_release": "2026-04-20"
         }
       }
     },
@@ -284,8 +284,8 @@
           "execs": [
             "sst"
           ],
-          "version": "4.7.7",
-          "last_release": "2026-04-17"
+          "version": "4.8.0",
+          "last_release": "2026-04-19"
         },
         "vercel": {
           "description": "Deploy and manage projects on the Vercel platform",
@@ -619,8 +619,8 @@
           "execs": [
             "create-vite"
           ],
-          "version": "9.0.4",
-          "last_release": "2026-04-06"
+          "version": "9.0.5",
+          "last_release": "2026-04-20"
         },
         "degit": {
           "description": "Straightforward project scaffolding via git repository cloning",
