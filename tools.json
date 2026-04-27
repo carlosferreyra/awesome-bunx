@@ -62,8 +62,8 @@
               "description": "Produce a production build"
             }
           ],
-          "version": "8.0.9",
-          "last_release": "2026-04-20"
+          "version": "8.0.10",
+          "last_release": "2026-04-23"
         }
       }
     },
@@ -83,8 +83,8 @@
               "description": "Lint and format the current project in one pass"
             }
           ],
-          "version": "2.4.12",
-          "last_release": "2026-04-14"
+          "version": "2.4.13",
+          "last_release": "2026-04-23"
         },
         "eslint": {
           "description": "Pluggable static analyzer for JavaScript and TypeScript",
@@ -101,8 +101,8 @@
           "execs": [
             "oxlint"
           ],
-          "version": "1.60.0",
-          "last_release": "2026-04-13"
+          "version": "1.61.0",
+          "last_release": "2026-04-20"
         },
         "prettier": {
           "description": "Opinionated code formatter supporting many languages",
@@ -173,8 +173,8 @@
           "execs": [
             "stylelint"
           ],
-          "version": "17.8.0",
-          "last_release": "2026-04-15"
+          "version": "17.9.0",
+          "last_release": "2026-04-23"
         },
         "tailwindcss": {
           "description": "Utility-first CSS framework with a standalone CLI",
@@ -188,8 +188,8 @@
               "description": "Watch and compile Tailwind styles to a CSS file"
             }
           ],
-          "version": "4.2.2",
-          "last_release": "2026-03-18"
+          "version": "4.2.4",
+          "last_release": "2026-04-21"
         }
       }
     },
@@ -231,8 +231,8 @@
               "description": "Create and apply a new development migration"
             }
           ],
-          "version": "7.7.0",
-          "last_release": "2026-04-07"
+          "version": "7.8.0",
+          "last_release": "2026-04-22"
         },
         "sequelize-cli": {
           "description": "Command-line interface for Sequelize ORM",
@@ -265,8 +265,8 @@
             "netlify",
             "ntl"
           ],
-          "version": "25.0.1",
-          "last_release": "2026-04-18"
+          "version": "25.6.0",
+          "last_release": "2026-04-24"
         },
         "serverless": {
           "description": "Build and deploy serverless applications to any cloud",
@@ -284,8 +284,8 @@
           "execs": [
             "sst"
           ],
-          "version": "4.8.0",
-          "last_release": "2026-04-19"
+          "version": "4.12.2",
+          "last_release": "2026-04-24"
         },
         "vercel": {
           "description": "Deploy and manage projects on the Vercel platform",
@@ -300,8 +300,8 @@
               "description": "Deploy the current directory to a preview URL"
             }
           ],
-          "version": "51.7.0",
-          "last_release": "2026-04-17"
+          "version": "52.0.0",
+          "last_release": "2026-04-22"
         },
         "wrangler": {
           "description": "Command-line tool for building with Cloudflare Workers and Pages",
@@ -309,8 +309,8 @@
           "execs": [
             "wrangler"
           ],
-          "version": "4.83.0",
-          "last_release": "2026-04-15"
+          "version": "4.85.0",
+          "last_release": "2026-04-24"
         }
       }
     },
@@ -423,8 +423,8 @@
           "execs": [
             "astro"
           ],
-          "version": "6.1.8",
-          "last_release": "2026-04-18"
+          "version": "6.1.9",
+          "last_release": "2026-04-22"
         },
         "create-astro": {
           "description": "Scaffold a new Astro project",
@@ -432,8 +432,8 @@
           "execs": [
             "create-astro"
           ],
-          "version": "5.0.5",
-          "last_release": "2026-03-30"
+          "version": "5.0.6",
+          "last_release": "2026-04-22"
         },
         "next": {
           "description": "The React Framework for production-grade applications",
@@ -523,8 +523,8 @@
               "description": "Upgrade all dependencies in package.json to the latest"
             }
           ],
-          "version": "21.0.2",
-          "last_release": "2026-04-16"
+          "version": "22.0.1",
+          "last_release": "2026-04-25"
         },
         "taze": {
           "description": "Modern cli tool that keeps deps fresh",
@@ -619,8 +619,8 @@
           "execs": [
             "create-vite"
           ],
-          "version": "9.0.5",
-          "last_release": "2026-04-20"
+          "version": "9.0.6",
+          "last_release": "2026-04-23"
         },
         "degit": {
           "description": "Straightforward project scaffolding via git repository cloning",
@@ -685,8 +685,8 @@
           "execs": [
             "cypress"
           ],
-          "version": "15.14.0",
-          "last_release": "2026-04-16"
+          "version": "15.14.1",
+          "last_release": "2026-04-21"
         },
         "jest": {
           "description": "Delightful JavaScript testing framework with a focus on simplicity",
@@ -728,8 +728,8 @@
           "execs": [
             "vitest"
           ],
-          "version": "4.1.4",
-          "last_release": "2026-04-09"
+          "version": "4.1.5",
+          "last_release": "2026-04-21"
         }
       }
     },
