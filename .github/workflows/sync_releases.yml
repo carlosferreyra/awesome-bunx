@@ -24,7 +24,7 @@ jobs:
         run: bun run scripts/latest_release.ts
 
       - name: Commit changes if any
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: 'chore(tools): sync latest npm release metadata [skip ci]'
           file_pattern: tools.json

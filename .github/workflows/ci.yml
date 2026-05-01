@@ -57,7 +57,7 @@ jobs:
 
       - name: Upload validation report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: validation-report
           path: |
@@ -73,7 +73,7 @@ jobs:
         run: bun run scripts/readme.ts
 
       - name: Commit README if changed
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: 'chore(readme): regenerate from tools.json [skip ci]'
           file_pattern: README.md
