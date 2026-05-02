@@ -3,18 +3,23 @@
  * Test that tools in the list are installable and executable via bunx.
  *
  * Usage:
+ *   bun run scripts/test_clients.ts --all
+ *   bun run scripts/test_clients.ts --diff origin/main
  *   bun run scripts/test_clients.ts --tools '<json>'
  *
- * The --tools argument accepts a JSON array of tool objects matching the
- * tools.json schema. Each object must have at minimum:
- *   {"package": "<name>", "execs": ["<binary>", ...]}
+ * Modes (mutually exclusive):
+ *   --all              Test every tool in tools.json.
+ *   --diff <ref>       Test only tools added vs. <ref> (uses diff_tools.ts).
+ *   --tools '<json>'   Explicit JSON array of {"package", "execs"} objects.
  *
- * Examples:
- *   # Test a single tool (e.g. from a PR diff):
- *   bun run scripts/test_clients.ts --tools '[{"package":"eslint","execs":["eslint"]}]'
+ * Exit codes:
+ *   0  all tested tools passed (or nothing to test in --diff mode)
+ *   1  one or more tools failed, or invalid input
  */
 import { spawnSync } from 'node:child_process';
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { parseArgs } from 'node:util';
 
 type InputTool = { package: string; execs?: string[] };
@@ -92,26 +97,63 @@ function testTool(pkg: string, execName: string): { success: boolean; failureTyp
 	return { success: false, failureType: classifyFailure(combinedOut, combinedErr) };
 }
 
+type Tool = { execs: string[] };
+type Category = { tools: Record<string, Tool> };
+type ToolsFile = { categories: Category[] };
+
+function loadAllTools(toolsPath: string): InputTool[] {
+	const data = JSON.parse(readFileSync(toolsPath, 'utf8')) as ToolsFile;
+	return data.categories.flatMap((c) =>
+		Object.entries(c.tools).map(([k, v]) => ({ package: k, execs: v.execs }))
+	);
+}
+
+function loadDiffTools(baseRef: string): InputTool[] {
+	const __dirname = dirname(fileURLToPath(import.meta.url));
+	const script = resolve(__dirname, 'diff_tools.ts');
+	const result = spawnSync('bun', ['run', script, '--base', baseRef], { encoding: 'utf8' });
+	if (result.status === 2) return [];
+	if (result.status !== 0) {
+		console.error(`diff_tools.ts failed: ${result.stderr ?? ''}`);
+		process.exit(1);
+	}
+	return JSON.parse((result.stdout ?? '').toString()) as InputTool[];
+}
+
 function main(): void {
 	const { values } = parseArgs({
 		options: {
+			all: { type: 'boolean' },
+			diff: { type: 'string' },
 			tools: { type: 'string' },
 			output: { type: 'string', default: 'output.log' },
+			'tools-path': { type: 'string', default: 'tools.json' },
 		},
 		strict: false,
 	});
 
-	if (!values.tools) {
-		console.error('Error: --tools is required');
+	const modes = [values.all, values.diff, values.tools].filter(Boolean).length;
+	if (modes !== 1) {
+		console.error('Error: exactly one of --all, --diff <ref>, --tools <json> is required');
 		process.exit(1);
 	}
 
 	let tools: InputTool[];
-	try {
-		tools = JSON.parse(values.tools as string) as InputTool[];
-	} catch (err) {
-		console.error(`Error: --tools is not valid JSON: ${(err as Error).message}`);
-		process.exit(1);
+	if (values.all) {
+		tools = loadAllTools(values['tools-path'] as string);
+	} else if (values.diff) {
+		tools = loadDiffTools(values.diff as string);
+		if (tools.length === 0) {
+			console.log('No new tools to test.');
+			return;
+		}
+	} else {
+		try {
+			tools = JSON.parse(values.tools as string) as InputTool[];
+		} catch (err) {
+			console.error(`Error: --tools is not valid JSON: ${(err as Error).message}`);
+			process.exit(1);
+		}
 	}
 
 	const bunVersion = run('bun', ['--version']);
