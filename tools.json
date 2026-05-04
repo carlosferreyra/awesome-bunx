@@ -83,8 +83,8 @@
               "description": "Lint and format the current project in one pass"
             }
           ],
-          "version": "2.4.13",
-          "last_release": "2026-04-23"
+          "version": "2.4.14",
+          "last_release": "2026-05-01"
         },
         "eslint": {
           "description": "Pluggable static analyzer for JavaScript and TypeScript",
@@ -92,8 +92,8 @@
           "execs": [
             "eslint"
           ],
-          "version": "10.2.1",
-          "last_release": "2026-04-17"
+          "version": "10.3.0",
+          "last_release": "2026-05-01"
         },
         "oxlint": {
           "description": "Fast JavaScript/TypeScript linter written in Rust",
@@ -101,8 +101,8 @@
           "execs": [
             "oxlint"
           ],
-          "version": "1.61.0",
-          "last_release": "2026-04-20"
+          "version": "1.62.0",
+          "last_release": "2026-04-27"
         },
         "prettier": {
           "description": "Opinionated code formatter supporting many languages",
@@ -173,8 +173,8 @@
           "execs": [
             "stylelint"
           ],
-          "version": "17.9.0",
-          "last_release": "2026-04-23"
+          "version": "17.10.0",
+          "last_release": "2026-05-03"
         },
         "tailwindcss": {
           "description": "Utility-first CSS framework with a standalone CLI",
@@ -212,8 +212,8 @@
           "execs": [
             "knex"
           ],
-          "version": "3.2.9",
-          "last_release": "2026-04-03"
+          "version": "3.2.10",
+          "last_release": "2026-05-02"
         },
         "prisma": {
           "description": "Next-generation Node.js and TypeScript ORM with a migration CLI",
@@ -255,8 +255,8 @@
           "execs": [
             "firebase"
           ],
-          "version": "15.15.0",
-          "last_release": "2026-04-16"
+          "version": "15.16.0",
+          "last_release": "2026-04-29"
         },
         "netlify-cli": {
           "description": "Netlify command-line tool for local development and deployment",
@@ -265,8 +265,8 @@
             "netlify",
             "ntl"
           ],
-          "version": "25.6.0",
-          "last_release": "2026-04-24"
+          "version": "26.0.0",
+          "last_release": "2026-04-28"
         },
         "serverless": {
           "description": "Build and deploy serverless applications to any cloud",
@@ -275,8 +275,8 @@
             "serverless",
             "sls"
           ],
-          "version": "4.34.0",
-          "last_release": "2026-04-10"
+          "version": "4.35.0",
+          "last_release": "2026-04-30"
         },
         "sst": {
           "description": "Build full-stack apps on your own infrastructure",
@@ -284,8 +284,8 @@
           "execs": [
             "sst"
           ],
-          "version": "4.12.2",
-          "last_release": "2026-04-24"
+          "version": "4.12.11",
+          "last_release": "2026-05-01"
         },
         "vercel": {
           "description": "Deploy and manage projects on the Vercel platform",
@@ -300,8 +300,8 @@
               "description": "Deploy the current directory to a preview URL"
             }
           ],
-          "version": "52.0.0",
-          "last_release": "2026-04-22"
+          "version": "53.1.0",
+          "last_release": "2026-05-01"
         },
         "wrangler": {
           "description": "Command-line tool for building with Cloudflare Workers and Pages",
@@ -309,8 +309,8 @@
           "execs": [
             "wrangler"
           ],
-          "version": "4.85.0",
-          "last_release": "2026-04-24"
+          "version": "4.87.0",
+          "last_release": "2026-04-30"
         }
       }
     },
@@ -423,8 +423,8 @@
           "execs": [
             "astro"
           ],
-          "version": "6.1.9",
-          "last_release": "2026-04-22"
+          "version": "6.2.1",
+          "last_release": "2026-04-30"
         },
         "create-astro": {
           "description": "Scaffold a new Astro project",
@@ -450,8 +450,8 @@
           "execs": [
             "nuxi"
           ],
-          "version": "3.34.0",
-          "last_release": "2026-03-10"
+          "version": "3.35.1",
+          "last_release": "2026-04-27"
         },
         "sv": {
           "description": "Official Svelte CLI — scaffold and manage SvelteKit projects",
@@ -465,8 +465,8 @@
               "description": "Create a new SvelteKit project"
             }
           ],
-          "version": "0.15.1",
-          "last_release": "2026-04-10"
+          "version": "0.15.2",
+          "last_release": "2026-04-29"
         },
         "storybook": {
           "description": "Build and document UI components in isolation",
@@ -474,8 +474,8 @@
           "execs": [
             "storybook"
           ],
-          "version": "10.3.5",
-          "last_release": "2026-04-07"
+          "version": "10.3.6",
+          "last_release": "2026-04-29"
         }
       }
     },
@@ -523,8 +523,8 @@
               "description": "Upgrade all dependencies in package.json to the latest"
             }
           ],
-          "version": "22.0.1",
-          "last_release": "2026-04-25"
+          "version": "22.1.0",
+          "last_release": "2026-05-02"
         },
         "taze": {
           "description": "Modern cli tool that keeps deps fresh",
@@ -553,8 +553,8 @@
               "description": "Generate a TypeScript Axios client from an OpenAPI spec"
             }
           ],
-          "version": "2.31.1",
-          "last_release": "2026-04-07"
+          "version": "2.32.0",
+          "last_release": "2026-04-28"
         },
         "json-server": {
           "description": "Full fake REST API with zero coding in seconds",
@@ -670,8 +670,8 @@
           "execs": [
             "snyk"
           ],
-          "version": "1.1304.0",
-          "last_release": "2026-04-09"
+          "version": "1.1304.1",
+          "last_release": "2026-04-27"
         }
       }
     },
@@ -685,8 +685,8 @@
           "execs": [
             "cypress"
           ],
-          "version": "15.14.1",
-          "last_release": "2026-04-21"
+          "version": "15.14.2",
+          "last_release": "2026-04-29"
         },
         "jest": {
           "description": "Delightful JavaScript testing framework with a focus on simplicity",
@@ -803,8 +803,8 @@
               "description": "Run an audit on a URL and open the report in the browser"
             }
           ],
-          "version": "13.1.0",
-          "last_release": "2026-04-06"
+          "version": "13.2.0",
+          "last_release": "2026-05-01"
         },
         "size-limit": {
           "description": "Keep your JavaScript and CSS bundle size small",
