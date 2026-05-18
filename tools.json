@@ -34,8 +34,8 @@
           "execs": [
             "rollup"
           ],
-          "version": "4.60.3",
-          "last_release": "2026-05-04"
+          "version": "4.60.4",
+          "last_release": "2026-05-14"
         },
         "tsup": {
           "description": "Bundle TypeScript libraries with zero config, powered by esbuild",
@@ -62,8 +62,8 @@
               "description": "Produce a production build"
             }
           ],
-          "version": "8.0.12",
-          "last_release": "2026-05-11"
+          "version": "8.0.13",
+          "last_release": "2026-05-14"
         }
       }
     },
@@ -92,8 +92,8 @@
           "execs": [
             "eslint"
           ],
-          "version": "10.3.0",
-          "last_release": "2026-05-01"
+          "version": "10.4.0",
+          "last_release": "2026-05-15"
         },
         "oxlint": {
           "description": "Fast JavaScript/TypeScript linter written in Rust",
@@ -101,8 +101,8 @@
           "execs": [
             "oxlint"
           ],
-          "version": "1.63.0",
-          "last_release": "2026-05-05"
+          "version": "1.65.0",
+          "last_release": "2026-05-15"
         },
         "prettier": {
           "description": "Opinionated code formatter supporting many languages",
@@ -173,8 +173,8 @@
           "execs": [
             "stylelint"
           ],
-          "version": "17.11.0",
-          "last_release": "2026-05-05"
+          "version": "17.11.1",
+          "last_release": "2026-05-14"
         },
         "tailwindcss": {
           "description": "Utility-first CSS framework with a standalone CLI",
@@ -255,8 +255,8 @@
           "execs": [
             "firebase"
           ],
-          "version": "15.17.0",
-          "last_release": "2026-05-06"
+          "version": "15.18.0",
+          "last_release": "2026-05-13"
         },
         "netlify-cli": {
           "description": "Netlify command-line tool for local development and deployment",
@@ -265,8 +265,8 @@
             "netlify",
             "ntl"
           ],
-          "version": "26.0.1",
-          "last_release": "2026-05-05"
+          "version": "26.0.2",
+          "last_release": "2026-05-15"
         },
         "serverless": {
           "description": "Build and deploy serverless applications to any cloud",
@@ -275,8 +275,8 @@
             "serverless",
             "sls"
           ],
-          "version": "4.35.1",
-          "last_release": "2026-05-06"
+          "version": "4.36.1",
+          "last_release": "2026-05-14"
         },
         "sst": {
           "description": "Build full-stack apps on your own infrastructure",
@@ -284,8 +284,8 @@
           "execs": [
             "sst"
           ],
-          "version": "4.13.1",
-          "last_release": "2026-05-05"
+          "version": "4.14.1",
+          "last_release": "2026-05-12"
         },
         "vercel": {
           "description": "Deploy and manage projects on the Vercel platform",
@@ -300,8 +300,8 @@
               "description": "Deploy the current directory to a preview URL"
             }
           ],
-          "version": "53.3.2",
-          "last_release": "2026-05-10"
+          "version": "54.1.0",
+          "last_release": "2026-05-15"
         },
         "wrangler": {
           "description": "Command-line tool for building with Cloudflare Workers and Pages",
@@ -309,8 +309,8 @@
           "execs": [
             "wrangler"
           ],
-          "version": "4.90.0",
-          "last_release": "2026-05-07"
+          "version": "4.92.0",
+          "last_release": "2026-05-15"
         }
       }
     },
@@ -423,8 +423,8 @@
           "execs": [
             "astro"
           ],
-          "version": "6.3.1",
-          "last_release": "2026-05-07"
+          "version": "6.3.3",
+          "last_release": "2026-05-14"
         },
         "create-astro": {
           "description": "Scaffold a new Astro project",
@@ -450,8 +450,8 @@
           "execs": [
             "nuxi"
           ],
-          "version": "3.35.1",
-          "last_release": "2026-04-27"
+          "version": "3.35.2",
+          "last_release": "2026-05-11"
         },
         "sv": {
           "description": "Official Svelte CLI — scaffold and manage SvelteKit projects",
@@ -474,8 +474,8 @@
           "execs": [
             "storybook"
           ],
-          "version": "10.3.6",
-          "last_release": "2026-04-29"
+          "version": "10.4.0",
+          "last_release": "2026-05-14"
         }
       }
     },
@@ -523,8 +523,8 @@
               "description": "Upgrade all dependencies in package.json to the latest"
             }
           ],
-          "version": "22.1.1",
-          "last_release": "2026-05-07"
+          "version": "22.2.0",
+          "last_release": "2026-05-12"
         },
         "taze": {
           "description": "Modern cli tool that keeps deps fresh",
@@ -532,8 +532,8 @@
           "execs": [
             "taze"
           ],
-          "version": "19.11.0",
-          "last_release": "2026-04-01"
+          "version": "19.12.0",
+          "last_release": "2026-05-15"
         }
       }
     },
@@ -670,8 +670,8 @@
           "execs": [
             "snyk"
           ],
-          "version": "1.1304.2",
-          "last_release": "2026-05-06"
+          "version": "1.1304.3",
+          "last_release": "2026-05-13"
         }
       }
     },
@@ -685,8 +685,8 @@
           "execs": [
             "cypress"
           ],
-          "version": "15.14.2",
-          "last_release": "2026-04-29"
+          "version": "15.15.0",
+          "last_release": "2026-05-12"
         },
         "jest": {
           "description": "Delightful JavaScript testing framework with a focus on simplicity",
@@ -719,8 +719,8 @@
               "description": "Install the browser binaries required by Playwright"
             }
           ],
-          "version": "1.59.1",
-          "last_release": "2026-04-01"
+          "version": "1.60.0",
+          "last_release": "2026-05-11"
         },
         "vitest": {
           "description": "Blazing fast unit-test framework powered by Vite",
@@ -728,8 +728,8 @@
           "execs": [
             "vitest"
           ],
-          "version": "4.1.5",
-          "last_release": "2026-04-21"
+          "version": "4.1.6",
+          "last_release": "2026-05-11"
         }
       }
     },
@@ -755,8 +755,8 @@
           "execs": [
             "tsx"
           ],
-          "version": "4.21.0",
-          "last_release": "2025-11-30"
+          "version": "4.22.1",
+          "last_release": "2026-05-17"
         },
         "typescript": {
           "description": "TypeScript language compiler and language server",
@@ -920,8 +920,8 @@
           "execs": [
             "lint-staged"
           ],
-          "version": "17.0.4",
-          "last_release": "2026-05-09"
+          "version": "17.0.5",
+          "last_release": "2026-05-16"
         },
         "semantic-release": {
           "description": "Fully automated version management and package publishing",
