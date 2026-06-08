@@ -34,8 +34,8 @@
           "execs": [
             "rollup"
           ],
-          "version": "4.61.0",
-          "last_release": "2026-06-01"
+          "version": "4.61.1",
+          "last_release": "2026-06-04"
         },
         "tsup": {
           "description": "Bundle TypeScript libraries with zero config, powered by esbuild",
@@ -62,7 +62,7 @@
               "description": "Produce a production build"
             }
           ],
-          "version": "8.0.15",
+          "version": "8.0.16",
           "last_release": "2026-06-01"
         }
       }
@@ -101,8 +101,8 @@
           "execs": [
             "oxlint"
           ],
-          "version": "1.67.0",
-          "last_release": "2026-05-26"
+          "version": "1.68.0",
+          "last_release": "2026-06-01"
         },
         "prettier": {
           "description": "Opinionated code formatter supporting many languages",
@@ -173,8 +173,8 @@
           "execs": [
             "stylelint"
           ],
-          "version": "17.12.0",
-          "last_release": "2026-05-20"
+          "version": "17.13.0",
+          "last_release": "2026-06-06"
         },
         "tailwindcss": {
           "description": "Utility-first CSS framework with a standalone CLI",
@@ -255,8 +255,8 @@
           "execs": [
             "firebase"
           ],
-          "version": "15.19.0",
-          "last_release": "2026-05-27"
+          "version": "15.19.1",
+          "last_release": "2026-06-03"
         },
         "netlify-cli": {
           "description": "Netlify command-line tool for local development and deployment",
@@ -300,8 +300,8 @@
               "description": "Deploy the current directory to a preview URL"
             }
           ],
-          "version": "54.6.1",
-          "last_release": "2026-05-28"
+          "version": "54.9.1",
+          "last_release": "2026-06-04"
         },
         "wrangler": {
           "description": "Command-line tool for building with Cloudflare Workers and Pages",
@@ -309,8 +309,8 @@
           "execs": [
             "wrangler"
           ],
-          "version": "4.95.0",
-          "last_release": "2026-05-26"
+          "version": "4.98.0",
+          "last_release": "2026-06-04"
         }
       }
     },
@@ -324,8 +324,8 @@
           "execs": [
             "concurrently"
           ],
-          "version": "10.0.1",
-          "last_release": "2026-05-31"
+          "version": "10.0.3",
+          "last_release": "2026-06-02"
         },
         "cross-env": {
           "description": "Cross-platform utility for setting environment variables",
@@ -384,8 +384,8 @@
               "description": "Build and serve an Eleventy site locally"
             }
           ],
-          "version": "3.1.5",
-          "last_release": "2026-03-18"
+          "version": "3.1.6",
+          "last_release": "2026-06-02"
         },
         "typedoc": {
           "description": "API documentation generator for TypeScript projects",
@@ -423,8 +423,8 @@
           "execs": [
             "astro"
           ],
-          "version": "6.4.2",
-          "last_release": "2026-05-28"
+          "version": "6.4.4",
+          "last_release": "2026-06-03"
         },
         "create-astro": {
           "description": "Scaffold a new Astro project",
@@ -441,8 +441,8 @@
           "execs": [
             "next"
           ],
-          "version": "16.2.6",
-          "last_release": "2026-05-07"
+          "version": "16.2.7",
+          "last_release": "2026-06-01"
         },
         "nuxi": {
           "description": "Command-line interface for the Nuxt framework",
@@ -465,8 +465,8 @@
               "description": "Create a new SvelteKit project"
             }
           ],
-          "version": "0.15.3",
-          "last_release": "2026-05-08"
+          "version": "0.15.4",
+          "last_release": "2026-06-04"
         },
         "storybook": {
           "description": "Build and document UI components in isolation",
@@ -474,8 +474,8 @@
           "execs": [
             "storybook"
           ],
-          "version": "10.4.1",
-          "last_release": "2026-05-22"
+          "version": "10.4.2",
+          "last_release": "2026-06-02"
         }
       }
     },
@@ -523,8 +523,8 @@
               "description": "Upgrade all dependencies in package.json to the latest"
             }
           ],
-          "version": "22.2.1",
-          "last_release": "2026-05-24"
+          "version": "22.2.3",
+          "last_release": "2026-06-06"
         },
         "taze": {
           "description": "Modern cli tool that keeps deps fresh",
@@ -601,8 +601,8 @@
               "description": "Create a new Next.js project named my-app"
             }
           ],
-          "version": "16.2.6",
-          "last_release": "2026-05-07"
+          "version": "16.2.7",
+          "last_release": "2026-06-01"
         },
         "create-t3-app": {
           "description": "Interactive CLI to start a typesafe Next.js app (the T3 Stack)",
@@ -628,8 +628,8 @@
           "execs": [
             "degit"
           ],
-          "version": "3.3.2",
-          "last_release": "2026-05-27"
+          "version": "3.4.2",
+          "last_release": "2026-06-04"
         },
         "plop": {
           "description": "Micro-generator framework for consistent code scaffolding",
@@ -670,8 +670,8 @@
           "execs": [
             "snyk"
           ],
-          "version": "1.1305.0",
-          "last_release": "2026-05-20"
+          "version": "1.1305.1",
+          "last_release": "2026-06-02"
         }
       }
     },
@@ -728,8 +728,8 @@
           "execs": [
             "vitest"
           ],
-          "version": "4.1.7",
-          "last_release": "2026-05-20"
+          "version": "4.1.8",
+          "last_release": "2026-06-01"
         }
       }
     },
