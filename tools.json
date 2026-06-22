@@ -34,8 +34,8 @@
           "execs": [
             "rollup"
           ],
-          "version": "4.62.0",
-          "last_release": "2026-06-13"
+          "version": "4.62.2",
+          "last_release": "2026-06-19"
         },
         "tsup": {
           "description": "Bundle TypeScript libraries with zero config, powered by esbuild",
@@ -101,8 +101,8 @@
           "execs": [
             "oxlint"
           ],
-          "version": "1.69.0",
-          "last_release": "2026-06-08"
+          "version": "1.70.0",
+          "last_release": "2026-06-15"
         },
         "prettier": {
           "description": "Opinionated code formatter supporting many languages",
@@ -255,8 +255,8 @@
           "execs": [
             "firebase"
           ],
-          "version": "15.20.0",
-          "last_release": "2026-06-10"
+          "version": "15.22.0",
+          "last_release": "2026-06-18"
         },
         "netlify-cli": {
           "description": "Netlify command-line tool for local development and deployment",
@@ -275,8 +275,8 @@
             "serverless",
             "sls"
           ],
-          "version": "4.37.0",
-          "last_release": "2026-05-27"
+          "version": "4.38.1",
+          "last_release": "2026-06-19"
         },
         "sst": {
           "description": "Build full-stack apps on your own infrastructure",
@@ -300,8 +300,8 @@
               "description": "Deploy the current directory to a preview URL"
             }
           ],
-          "version": "54.14.0",
-          "last_release": "2026-06-14"
+          "version": "54.14.5",
+          "last_release": "2026-06-20"
         },
         "wrangler": {
           "description": "Command-line tool for building with Cloudflare Workers and Pages",
@@ -309,8 +309,8 @@
           "execs": [
             "wrangler"
           ],
-          "version": "4.100.0",
-          "last_release": "2026-06-11"
+          "version": "4.103.0",
+          "last_release": "2026-06-19"
         }
       }
     },
@@ -423,8 +423,8 @@
           "execs": [
             "astro"
           ],
-          "version": "6.4.6",
-          "last_release": "2026-06-10"
+          "version": "6.4.8",
+          "last_release": "2026-06-17"
         },
         "create-astro": {
           "description": "Scaffold a new Astro project",
@@ -450,8 +450,8 @@
           "execs": [
             "nuxi"
           ],
-          "version": "3.35.2",
-          "last_release": "2026-05-11"
+          "version": "3.36.0",
+          "last_release": "2026-06-20"
         },
         "sv": {
           "description": "Official Svelte CLI — scaffold and manage SvelteKit projects",
@@ -474,8 +474,8 @@
           "execs": [
             "storybook"
           ],
-          "version": "10.4.4",
-          "last_release": "2026-06-11"
+          "version": "10.4.6",
+          "last_release": "2026-06-16"
         }
       }
     },
@@ -523,8 +523,8 @@
               "description": "Upgrade all dependencies in package.json to the latest"
             }
           ],
-          "version": "22.2.3",
-          "last_release": "2026-06-06"
+          "version": "22.2.7",
+          "last_release": "2026-06-20"
         },
         "taze": {
           "description": "Modern cli tool that keeps deps fresh",
@@ -553,8 +553,8 @@
               "description": "Generate a TypeScript Axios client from an OpenAPI spec"
             }
           ],
-          "version": "2.38.0",
-          "last_release": "2026-06-11"
+          "version": "2.39.0",
+          "last_release": "2026-06-20"
         },
         "json-server": {
           "description": "Full fake REST API with zero coding in seconds",
@@ -719,8 +719,8 @@
               "description": "Install the browser binaries required by Playwright"
             }
           ],
-          "version": "1.60.0",
-          "last_release": "2026-05-11"
+          "version": "1.61.0",
+          "last_release": "2026-06-15"
         },
         "vitest": {
           "description": "Blazing fast unit-test framework powered by Vite",
@@ -920,8 +920,8 @@
           "execs": [
             "lint-staged"
           ],
-          "version": "17.0.7",
-          "last_release": "2026-05-31"
+          "version": "17.0.8",
+          "last_release": "2026-06-20"
         },
         "semantic-release": {
           "description": "Fully automated version management and package publishing",
