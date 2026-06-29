@@ -62,8 +62,8 @@
               "description": "Produce a production build"
             }
           ],
-          "version": "8.0.16",
-          "last_release": "2026-06-01"
+          "version": "8.1.0",
+          "last_release": "2026-06-23"
         }
       }
     },
@@ -83,8 +83,8 @@
               "description": "Lint and format the current project in one pass"
             }
           ],
-          "version": "2.5.0",
-          "last_release": "2026-06-12"
+          "version": "2.5.1",
+          "last_release": "2026-06-23"
         },
         "eslint": {
           "description": "Pluggable static analyzer for JavaScript and TypeScript",
@@ -92,8 +92,8 @@
           "execs": [
             "eslint"
           ],
-          "version": "10.5.0",
-          "last_release": "2026-06-12"
+          "version": "10.6.0",
+          "last_release": "2026-06-26"
         },
         "oxlint": {
           "description": "Fast JavaScript/TypeScript linter written in Rust",
@@ -101,8 +101,8 @@
           "execs": [
             "oxlint"
           ],
-          "version": "1.70.0",
-          "last_release": "2026-06-15"
+          "version": "1.71.0",
+          "last_release": "2026-06-22"
         },
         "prettier": {
           "description": "Opinionated code formatter supporting many languages",
@@ -116,8 +116,8 @@
               "description": "Format every supported file in the project"
             }
           ],
-          "version": "3.8.4",
-          "last_release": "2026-06-09"
+          "version": "3.9.1",
+          "last_release": "2026-06-27"
         },
         "standard": {
           "description": "JavaScript style guide, linter, and formatter — zero config",
@@ -140,8 +140,8 @@
           "execs": [
             "autoprefixer"
           ],
-          "version": "10.5.0",
-          "last_release": "2026-04-13"
+          "version": "10.5.2",
+          "last_release": "2026-06-24"
         },
         "postcss-cli": {
           "description": "Command line interface for PostCSS",
@@ -173,8 +173,8 @@
           "execs": [
             "stylelint"
           ],
-          "version": "17.13.0",
-          "last_release": "2026-06-06"
+          "version": "17.14.0",
+          "last_release": "2026-06-25"
         },
         "tailwindcss": {
           "description": "Utility-first CSS framework with a standalone CLI",
@@ -212,8 +212,8 @@
           "execs": [
             "knex"
           ],
-          "version": "3.2.10",
-          "last_release": "2026-05-02"
+          "version": "3.3.0",
+          "last_release": "2026-06-26"
         },
         "prisma": {
           "description": "Next-generation Node.js and TypeScript ORM with a migration CLI",
@@ -255,8 +255,8 @@
           "execs": [
             "firebase"
           ],
-          "version": "15.22.0",
-          "last_release": "2026-06-18"
+          "version": "15.22.3",
+          "last_release": "2026-06-25"
         },
         "netlify-cli": {
           "description": "Netlify command-line tool for local development and deployment",
@@ -284,8 +284,8 @@
           "execs": [
             "sst"
           ],
-          "version": "4.15.2",
-          "last_release": "2026-05-29"
+          "version": "4.17.0",
+          "last_release": "2026-06-26"
         },
         "vercel": {
           "description": "Deploy and manage projects on the Vercel platform",
@@ -300,8 +300,8 @@
               "description": "Deploy the current directory to a preview URL"
             }
           ],
-          "version": "54.14.5",
-          "last_release": "2026-06-20"
+          "version": "54.18.2",
+          "last_release": "2026-06-28"
         },
         "wrangler": {
           "description": "Command-line tool for building with Cloudflare Workers and Pages",
@@ -309,8 +309,8 @@
           "execs": [
             "wrangler"
           ],
-          "version": "4.103.0",
-          "last_release": "2026-06-19"
+          "version": "4.105.0",
+          "last_release": "2026-06-25"
         }
       }
     },
@@ -423,8 +423,8 @@
           "execs": [
             "astro"
           ],
-          "version": "6.4.8",
-          "last_release": "2026-06-17"
+          "version": "7.0.3",
+          "last_release": "2026-06-25"
         },
         "create-astro": {
           "description": "Scaffold a new Astro project",
@@ -432,8 +432,8 @@
           "execs": [
             "create-astro"
           ],
-          "version": "5.0.6",
-          "last_release": "2026-04-22"
+          "version": "5.2.0",
+          "last_release": "2026-06-25"
         },
         "next": {
           "description": "The React Framework for production-grade applications",
@@ -450,8 +450,8 @@
           "execs": [
             "nuxi"
           ],
-          "version": "3.36.0",
-          "last_release": "2026-06-20"
+          "version": "3.36.1",
+          "last_release": "2026-06-26"
         },
         "sv": {
           "description": "Official Svelte CLI — scaffold and manage SvelteKit projects",
@@ -523,8 +523,8 @@
               "description": "Upgrade all dependencies in package.json to the latest"
             }
           ],
-          "version": "22.2.7",
-          "last_release": "2026-06-20"
+          "version": "22.2.9",
+          "last_release": "2026-06-28"
         },
         "taze": {
           "description": "Modern cli tool that keeps deps fresh",
@@ -619,8 +619,8 @@
           "execs": [
             "create-vite"
           ],
-          "version": "9.0.7",
-          "last_release": "2026-05-11"
+          "version": "9.1.0",
+          "last_release": "2026-06-23"
         },
         "degit": {
           "description": "Straightforward project scaffolding via git repository cloning",
@@ -670,8 +670,8 @@
           "execs": [
             "snyk"
           ],
-          "version": "1.1305.1",
-          "last_release": "2026-06-02"
+          "version": "1.1305.2",
+          "last_release": "2026-06-23"
         }
       }
     },
@@ -685,8 +685,8 @@
           "execs": [
             "cypress"
           ],
-          "version": "15.17.0",
-          "last_release": "2026-06-09"
+          "version": "15.18.0",
+          "last_release": "2026-06-23"
         },
         "jest": {
           "description": "Delightful JavaScript testing framework with a focus on simplicity",
@@ -719,8 +719,8 @@
               "description": "Install the browser binaries required by Playwright"
             }
           ],
-          "version": "1.61.0",
-          "last_release": "2026-06-15"
+          "version": "1.61.1",
+          "last_release": "2026-06-23"
         },
         "vitest": {
           "description": "Blazing fast unit-test framework powered by Vite",
