@@ -62,8 +62,8 @@
               "description": "Produce a production build"
             }
           ],
-          "version": "8.1.4",
-          "last_release": "2026-07-09"
+          "version": "8.1.5",
+          "last_release": "2026-07-16"
         }
       }
     },
@@ -83,8 +83,8 @@
               "description": "Lint and format the current project in one pass"
             }
           ],
-          "version": "2.5.3",
-          "last_release": "2026-07-08"
+          "version": "2.5.4",
+          "last_release": "2026-07-15"
         },
         "eslint": {
           "description": "Pluggable static analyzer for JavaScript and TypeScript",
@@ -101,8 +101,8 @@
           "execs": [
             "oxlint"
           ],
-          "version": "1.73.0",
-          "last_release": "2026-07-06"
+          "version": "1.74.0",
+          "last_release": "2026-07-14"
         },
         "prettier": {
           "description": "Opinionated code formatter supporting many languages",
@@ -140,8 +140,8 @@
           "execs": [
             "autoprefixer"
           ],
-          "version": "10.5.2",
-          "last_release": "2026-06-24"
+          "version": "10.5.4",
+          "last_release": "2026-07-16"
         },
         "postcss-cli": {
           "description": "Command line interface for PostCSS",
@@ -173,8 +173,8 @@
           "execs": [
             "stylelint"
           ],
-          "version": "17.14.0",
-          "last_release": "2026-06-25"
+          "version": "17.14.1",
+          "last_release": "2026-07-20"
         },
         "tailwindcss": {
           "description": "Utility-first CSS framework with a standalone CLI",
@@ -188,8 +188,8 @@
               "description": "Watch and compile Tailwind styles to a CSS file"
             }
           ],
-          "version": "4.3.2",
-          "last_release": "2026-06-29"
+          "version": "4.3.3",
+          "last_release": "2026-07-16"
         }
       }
     },
@@ -255,8 +255,8 @@
           "execs": [
             "firebase"
           ],
-          "version": "15.23.0",
-          "last_release": "2026-07-09"
+          "version": "15.24.0",
+          "last_release": "2026-07-15"
         },
         "netlify-cli": {
           "description": "Netlify command-line tool for local development and deployment",
@@ -300,8 +300,8 @@
               "description": "Deploy the current directory to a preview URL"
             }
           ],
-          "version": "55.0.0",
-          "last_release": "2026-07-09"
+          "version": "56.3.2",
+          "last_release": "2026-07-18"
         },
         "wrangler": {
           "description": "Command-line tool for building with Cloudflare Workers and Pages",
@@ -309,8 +309,8 @@
           "execs": [
             "wrangler"
           ],
-          "version": "4.110.0",
-          "last_release": "2026-07-09"
+          "version": "4.112.0",
+          "last_release": "2026-07-17"
         }
       }
     },
@@ -423,8 +423,8 @@
           "execs": [
             "astro"
           ],
-          "version": "7.0.7",
-          "last_release": "2026-07-08"
+          "version": "7.1.1",
+          "last_release": "2026-07-17"
         },
         "create-astro": {
           "description": "Scaffold a new Astro project",
@@ -450,8 +450,8 @@
           "execs": [
             "nuxi"
           ],
-          "version": "3.36.1",
-          "last_release": "2026-06-26"
+          "version": "3.37.0",
+          "last_release": "2026-07-14"
         },
         "sv": {
           "description": "Official Svelte CLI — scaffold and manage SvelteKit projects",
@@ -474,8 +474,8 @@
           "execs": [
             "storybook"
           ],
-          "version": "10.5.0",
-          "last_release": "2026-07-10"
+          "version": "10.5.2",
+          "last_release": "2026-07-16"
         }
       }
     },
@@ -628,8 +628,8 @@
           "execs": [
             "degit"
           ],
-          "version": "3.5.0",
-          "last_release": "2026-07-12"
+          "version": "3.6.1",
+          "last_release": "2026-07-16"
         },
         "plop": {
           "description": "Micro-generator framework for consistent code scaffolding",
@@ -670,8 +670,8 @@
           "execs": [
             "snyk"
           ],
-          "version": "1.1306.0",
-          "last_release": "2026-07-09"
+          "version": "1.1306.1",
+          "last_release": "2026-07-16"
         }
       }
     },
@@ -821,8 +821,8 @@
           "execs": [
             "webpack-bundle-analyzer"
           ],
-          "version": "5.3.0",
-          "last_release": "2026-03-25"
+          "version": "5.3.1",
+          "last_release": "2026-07-13"
         }
       }
     },
@@ -920,8 +920,8 @@
           "execs": [
             "lint-staged"
           ],
-          "version": "17.0.8",
-          "last_release": "2026-06-20"
+          "version": "17.1.0",
+          "last_release": "2026-07-18"
         },
         "semantic-release": {
           "description": "Fully automated version management and package publishing",
@@ -929,8 +929,8 @@
           "execs": [
             "semantic-release"
           ],
-          "version": "25.0.7",
-          "last_release": "2026-07-13"
+          "version": "25.0.8",
+          "last_release": "2026-07-18"
         }
       }
     },
