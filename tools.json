@@ -34,8 +34,8 @@
           "execs": [
             "rollup"
           ],
-          "version": "4.62.2",
-          "last_release": "2026-06-19"
+          "version": "4.62.3",
+          "last_release": "2026-07-26"
         },
         "tsup": {
           "description": "Bundle TypeScript libraries with zero config, powered by esbuild",
@@ -83,8 +83,8 @@
               "description": "Lint and format the current project in one pass"
             }
           ],
-          "version": "2.5.4",
-          "last_release": "2026-07-15"
+          "version": "2.5.5",
+          "last_release": "2026-07-21"
         },
         "eslint": {
           "description": "Pluggable static analyzer for JavaScript and TypeScript",
@@ -92,8 +92,8 @@
           "execs": [
             "eslint"
           ],
-          "version": "10.7.0",
-          "last_release": "2026-07-10"
+          "version": "10.8.0",
+          "last_release": "2026-07-24"
         },
         "oxlint": {
           "description": "Fast JavaScript/TypeScript linter written in Rust",
@@ -101,8 +101,8 @@
           "execs": [
             "oxlint"
           ],
-          "version": "1.74.0",
-          "last_release": "2026-07-14"
+          "version": "1.75.0",
+          "last_release": "2026-07-21"
         },
         "prettier": {
           "description": "Opinionated code formatter supporting many languages",
@@ -116,8 +116,8 @@
               "description": "Format every supported file in the project"
             }
           ],
-          "version": "3.9.5",
-          "last_release": "2026-07-09"
+          "version": "3.9.6",
+          "last_release": "2026-07-21"
         },
         "standard": {
           "description": "JavaScript style guide, linter, and formatter — zero config",
@@ -164,8 +164,8 @@
               "description": "Compile a Sass file to CSS"
             }
           ],
-          "version": "1.101.0",
-          "last_release": "2026-06-11"
+          "version": "1.102.0",
+          "last_release": "2026-07-25"
         },
         "stylelint": {
           "description": "Modern, powerful linter that helps you avoid errors and enforce CSS conventions",
@@ -231,8 +231,8 @@
               "description": "Create and apply a new development migration"
             }
           ],
-          "version": "7.8.0",
-          "last_release": "2026-04-22"
+          "version": "7.9.0",
+          "last_release": "2026-07-20"
         },
         "sequelize-cli": {
           "description": "Command-line interface for Sequelize ORM",
@@ -265,8 +265,8 @@
             "netlify",
             "ntl"
           ],
-          "version": "26.2.0",
-          "last_release": "2026-07-07"
+          "version": "27.0.0",
+          "last_release": "2026-07-24"
         },
         "serverless": {
           "description": "Build and deploy serverless applications to any cloud",
@@ -275,8 +275,8 @@
             "serverless",
             "sls"
           ],
-          "version": "4.39.0",
-          "last_release": "2026-07-08"
+          "version": "4.40.0",
+          "last_release": "2026-07-22"
         },
         "sst": {
           "description": "Build full-stack apps on your own infrastructure",
@@ -300,8 +300,8 @@
               "description": "Deploy the current directory to a preview URL"
             }
           ],
-          "version": "56.3.2",
-          "last_release": "2026-07-18"
+          "version": "57.0.0",
+          "last_release": "2026-07-24"
         },
         "wrangler": {
           "description": "Command-line tool for building with Cloudflare Workers and Pages",
@@ -309,8 +309,8 @@
           "execs": [
             "wrangler"
           ],
-          "version": "4.112.0",
-          "last_release": "2026-07-17"
+          "version": "4.114.0",
+          "last_release": "2026-07-23"
         }
       }
     },
@@ -324,8 +324,8 @@
           "execs": [
             "concurrently"
           ],
-          "version": "10.0.3",
-          "last_release": "2026-06-02"
+          "version": "10.0.4",
+          "last_release": "2026-07-24"
         },
         "cross-env": {
           "description": "Cross-platform utility for setting environment variables",
@@ -423,8 +423,8 @@
           "execs": [
             "astro"
           ],
-          "version": "7.1.1",
-          "last_release": "2026-07-17"
+          "version": "7.1.3",
+          "last_release": "2026-07-20"
         },
         "create-astro": {
           "description": "Scaffold a new Astro project",
@@ -441,8 +441,8 @@
           "execs": [
             "next"
           ],
-          "version": "16.2.10",
-          "last_release": "2026-07-01"
+          "version": "16.2.12",
+          "last_release": "2026-07-25"
         },
         "nuxi": {
           "description": "Command-line interface for the Nuxt framework",
@@ -465,8 +465,8 @@
               "description": "Create a new SvelteKit project"
             }
           ],
-          "version": "0.16.3",
-          "last_release": "2026-07-12"
+          "version": "0.16.6",
+          "last_release": "2026-07-25"
         },
         "storybook": {
           "description": "Build and document UI components in isolation",
@@ -474,8 +474,8 @@
           "execs": [
             "storybook"
           ],
-          "version": "10.5.2",
-          "last_release": "2026-07-16"
+          "version": "10.5.4",
+          "last_release": "2026-07-24"
         }
       }
     },
@@ -523,8 +523,8 @@
               "description": "Upgrade all dependencies in package.json to the latest"
             }
           ],
-          "version": "22.2.9",
-          "last_release": "2026-06-28"
+          "version": "23.0.0",
+          "last_release": "2026-07-26"
         },
         "taze": {
           "description": "Modern cli tool that keeps deps fresh",
@@ -532,8 +532,8 @@
           "execs": [
             "taze"
           ],
-          "version": "19.14.1",
-          "last_release": "2026-05-25"
+          "version": "19.16.0",
+          "last_release": "2026-07-22"
         }
       }
     },
@@ -553,8 +553,8 @@
               "description": "Generate a TypeScript Axios client from an OpenAPI spec"
             }
           ],
-          "version": "2.39.1",
-          "last_release": "2026-06-30"
+          "version": "2.40.1",
+          "last_release": "2026-07-24"
         },
         "json-server": {
           "description": "Full fake REST API with zero coding in seconds",
@@ -601,8 +601,8 @@
               "description": "Create a new Next.js project named my-app"
             }
           ],
-          "version": "16.2.10",
-          "last_release": "2026-07-01"
+          "version": "16.2.12",
+          "last_release": "2026-07-25"
         },
         "create-t3-app": {
           "description": "Interactive CLI to start a typesafe Next.js app (the T3 Stack)",
@@ -628,8 +628,8 @@
           "execs": [
             "degit"
           ],
-          "version": "3.6.1",
-          "last_release": "2026-07-16"
+          "version": "3.6.3",
+          "last_release": "2026-07-24"
         },
         "plop": {
           "description": "Micro-generator framework for consistent code scaffolding",
@@ -685,8 +685,8 @@
           "execs": [
             "cypress"
           ],
-          "version": "15.18.1",
-          "last_release": "2026-07-07"
+          "version": "15.19.0",
+          "last_release": "2026-07-21"
         },
         "jest": {
           "description": "Delightful JavaScript testing framework with a focus on simplicity",
@@ -719,8 +719,8 @@
               "description": "Install the browser binaries required by Playwright"
             }
           ],
-          "version": "1.61.1",
-          "last_release": "2026-06-23"
+          "version": "1.62.0",
+          "last_release": "2026-07-24"
         },
         "vitest": {
           "description": "Blazing fast unit-test framework powered by Vite",
@@ -803,8 +803,8 @@
               "description": "Run an audit on a URL and open the report in the browser"
             }
           ],
-          "version": "13.4.0",
-          "last_release": "2026-06-09"
+          "version": "13.4.1",
+          "last_release": "2026-07-20"
         },
         "size-limit": {
           "description": "Keep your JavaScript and CSS bundle size small",
@@ -812,8 +812,8 @@
           "execs": [
             "size-limit"
           ],
-          "version": "12.1.0",
-          "last_release": "2026-04-13"
+          "version": "13.0.1",
+          "last_release": "2026-07-24"
         },
         "webpack-bundle-analyzer": {
           "description": "Visualize the size of webpack output files with an interactive treemap",
@@ -920,8 +920,8 @@
           "execs": [
             "lint-staged"
           ],
-          "version": "17.1.0",
-          "last_release": "2026-07-18"
+          "version": "17.2.0",
+          "last_release": "2026-07-23"
         },
         "semantic-release": {
           "description": "Fully automated version management and package publishing",
