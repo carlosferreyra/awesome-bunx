@@ -16,8 +16,8 @@
               "description": "Bundle a TypeScript entry into a single JS file"
             }
           ],
-          "version": "0.28.1",
-          "last_release": "2026-06-11"
+          "version": "0.28.2",
+          "last_release": "2026-08-08"
         },
         "parcel": {
           "description": "Zero-configuration build tool for the web",
@@ -62,8 +62,8 @@
               "description": "Produce a production build"
             }
           ],
-          "version": "8.2.0",
-          "last_release": "2026-07-30"
+          "version": "8.2.1",
+          "last_release": "2026-08-06"
         }
       }
     },
@@ -83,8 +83,8 @@
               "description": "Lint and format the current project in one pass"
             }
           ],
-          "version": "2.5.6",
-          "last_release": "2026-07-28"
+          "version": "2.5.7",
+          "last_release": "2026-08-04"
         },
         "eslint": {
           "description": "Pluggable static analyzer for JavaScript and TypeScript",
@@ -92,8 +92,8 @@
           "execs": [
             "eslint"
           ],
-          "version": "10.8.0",
-          "last_release": "2026-07-24"
+          "version": "10.8.1",
+          "last_release": "2026-08-07"
         },
         "oxlint": {
           "description": "Fast JavaScript/TypeScript linter written in Rust",
@@ -101,8 +101,8 @@
           "execs": [
             "oxlint"
           ],
-          "version": "1.76.0",
-          "last_release": "2026-07-27"
+          "version": "1.77.0",
+          "last_release": "2026-08-03"
         },
         "prettier": {
           "description": "Opinionated code formatter supporting many languages",
@@ -255,8 +255,8 @@
           "execs": [
             "firebase"
           ],
-          "version": "15.25.1",
-          "last_release": "2026-07-30"
+          "version": "15.26.0",
+          "last_release": "2026-08-05"
         },
         "netlify-cli": {
           "description": "Netlify command-line tool for local development and deployment",
@@ -265,8 +265,8 @@
             "netlify",
             "ntl"
           ],
-          "version": "27.0.1",
-          "last_release": "2026-07-27"
+          "version": "27.1.1",
+          "last_release": "2026-08-07"
         },
         "serverless": {
           "description": "Build and deploy serverless applications to any cloud",
@@ -300,8 +300,8 @@
               "description": "Deploy the current directory to a preview URL"
             }
           ],
-          "version": "58.4.4",
-          "last_release": "2026-07-30"
+          "version": "58.9.0",
+          "last_release": "2026-08-08"
         },
         "wrangler": {
           "description": "Command-line tool for building with Cloudflare Workers and Pages",
@@ -309,8 +309,8 @@
           "execs": [
             "wrangler"
           ],
-          "version": "4.118.0",
-          "last_release": "2026-07-31"
+          "version": "4.120.0",
+          "last_release": "2026-08-07"
         }
       }
     },
@@ -423,8 +423,8 @@
           "execs": [
             "astro"
           ],
-          "version": "7.1.6",
-          "last_release": "2026-07-29"
+          "version": "7.2.0",
+          "last_release": "2026-08-06"
         },
         "create-astro": {
           "description": "Scaffold a new Astro project",
@@ -441,8 +441,8 @@
           "execs": [
             "next"
           ],
-          "version": "16.2.12",
-          "last_release": "2026-07-25"
+          "version": "16.3.0",
+          "last_release": "2026-08-03"
         },
         "nuxi": {
           "description": "Command-line interface for the Nuxt framework",
@@ -474,8 +474,8 @@
           "execs": [
             "storybook"
           ],
-          "version": "10.5.5",
-          "last_release": "2026-07-27"
+          "version": "10.5.7",
+          "last_release": "2026-08-06"
         }
       }
     },
@@ -523,8 +523,8 @@
               "description": "Upgrade all dependencies in package.json to the latest"
             }
           ],
-          "version": "23.0.1",
-          "last_release": "2026-08-02"
+          "version": "23.0.2",
+          "last_release": "2026-08-07"
         },
         "taze": {
           "description": "Modern cli tool that keeps deps fresh",
@@ -532,8 +532,8 @@
           "execs": [
             "taze"
           ],
-          "version": "19.17.1",
-          "last_release": "2026-08-03"
+          "version": "20.0.1",
+          "last_release": "2026-08-10"
         }
       }
     },
@@ -601,8 +601,8 @@
               "description": "Create a new Next.js project named my-app"
             }
           ],
-          "version": "16.2.12",
-          "last_release": "2026-07-25"
+          "version": "16.3.0",
+          "last_release": "2026-08-03"
         },
         "create-t3-app": {
           "description": "Interactive CLI to start a typesafe Next.js app (the T3 Stack)",
@@ -670,8 +670,8 @@
           "execs": [
             "snyk"
           ],
-          "version": "1.1306.2",
-          "last_release": "2026-07-27"
+          "version": "1.1306.3",
+          "last_release": "2026-08-06"
         }
       }
     },
@@ -685,8 +685,8 @@
           "execs": [
             "cypress"
           ],
-          "version": "15.19.0",
-          "last_release": "2026-07-21"
+          "version": "15.20.0",
+          "last_release": "2026-08-04"
         },
         "jest": {
           "description": "Delightful JavaScript testing framework with a focus on simplicity",
@@ -755,8 +755,8 @@
           "execs": [
             "tsx"
           ],
-          "version": "4.23.5",
-          "last_release": "2026-08-02"
+          "version": "4.23.12",
+          "last_release": "2026-08-10"
         },
         "typescript": {
           "description": "TypeScript language compiler and language server",
@@ -929,8 +929,8 @@
           "execs": [
             "semantic-release"
           ],
-          "version": "25.0.8",
-          "last_release": "2026-07-18"
+          "version": "25.0.9",
+          "last_release": "2026-08-05"
         }
       }
     },
