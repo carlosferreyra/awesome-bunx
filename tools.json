@@ -34,8 +34,8 @@
           "execs": [
             "rollup"
           ],
-          "version": "4.62.5",
-          "last_release": "2026-08-20"
+          "version": "4.63.1",
+          "last_release": "2026-08-28"
         },
         "tsup": {
           "description": "Bundle TypeScript libraries with zero config, powered by esbuild",
@@ -83,8 +83,8 @@
               "description": "Lint and format the current project in one pass"
             }
           ],
-          "version": "2.5.10",
-          "last_release": "2026-08-21"
+          "version": "2.5.11",
+          "last_release": "2026-08-27"
         },
         "eslint": {
           "description": "Pluggable static analyzer for JavaScript and TypeScript",
@@ -92,8 +92,8 @@
           "execs": [
             "eslint"
           ],
-          "version": "10.9.0",
-          "last_release": "2026-08-21"
+          "version": "10.9.1",
+          "last_release": "2026-08-24"
         },
         "oxlint": {
           "description": "Fast JavaScript/TypeScript linter written in Rust",
@@ -101,8 +101,8 @@
           "execs": [
             "oxlint"
           ],
-          "version": "1.79.0",
-          "last_release": "2026-08-18"
+          "version": "1.80.0",
+          "last_release": "2026-08-24"
         },
         "prettier": {
           "description": "Opinionated code formatter supporting many languages",
@@ -231,8 +231,8 @@
               "description": "Create and apply a new development migration"
             }
           ],
-          "version": "7.9.1",
-          "last_release": "2026-07-27"
+          "version": "8.0.0-rc.12",
+          "last_release": "2026-08-26"
         },
         "sequelize-cli": {
           "description": "Command-line interface for Sequelize ORM",
@@ -255,8 +255,8 @@
           "execs": [
             "firebase"
           ],
-          "version": "15.28.1",
-          "last_release": "2026-08-19"
+          "version": "15.28.2",
+          "last_release": "2026-08-27"
         },
         "netlify-cli": {
           "description": "Netlify command-line tool for local development and deployment",
@@ -265,8 +265,8 @@
             "netlify",
             "ntl"
           ],
-          "version": "27.1.2",
-          "last_release": "2026-08-18"
+          "version": "27.4.1",
+          "last_release": "2026-08-28"
         },
         "serverless": {
           "description": "Build and deploy serverless applications to any cloud",
@@ -275,8 +275,8 @@
             "serverless",
             "sls"
           ],
-          "version": "4.41.0",
-          "last_release": "2026-08-10"
+          "version": "4.41.1",
+          "last_release": "2026-08-26"
         },
         "sst": {
           "description": "Build full-stack apps on your own infrastructure",
@@ -300,8 +300,8 @@
               "description": "Deploy the current directory to a preview URL"
             }
           ],
-          "version": "59.5.0",
-          "last_release": "2026-08-22"
+          "version": "59.10.0",
+          "last_release": "2026-08-29"
         },
         "wrangler": {
           "description": "Command-line tool for building with Cloudflare Workers and Pages",
@@ -309,8 +309,8 @@
           "execs": [
             "wrangler"
           ],
-          "version": "4.125.0",
-          "last_release": "2026-08-20"
+          "version": "4.127.1",
+          "last_release": "2026-08-28"
         }
       }
     },
@@ -423,8 +423,8 @@
           "execs": [
             "astro"
           ],
-          "version": "7.2.4",
-          "last_release": "2026-08-19"
+          "version": "7.2.9",
+          "last_release": "2026-08-27"
         },
         "create-astro": {
           "description": "Scaffold a new Astro project",
@@ -432,8 +432,8 @@
           "execs": [
             "create-astro"
           ],
-          "version": "5.2.3",
-          "last_release": "2026-07-27"
+          "version": "5.2.4",
+          "last_release": "2026-08-24"
         },
         "next": {
           "description": "The React Framework for production-grade applications",
@@ -441,8 +441,8 @@
           "execs": [
             "next"
           ],
-          "version": "16.3.2",
-          "last_release": "2026-08-21"
+          "version": "16.3.3",
+          "last_release": "2026-08-25"
         },
         "nuxi": {
           "description": "Command-line interface for the Nuxt framework",
@@ -553,8 +553,8 @@
               "description": "Generate a TypeScript Axios client from an OpenAPI spec"
             }
           ],
-          "version": "2.40.1",
-          "last_release": "2026-07-24"
+          "version": "2.41.0",
+          "last_release": "2026-08-24"
         },
         "json-server": {
           "description": "Full fake REST API with zero coding in seconds",
@@ -601,8 +601,8 @@
               "description": "Create a new Next.js project named my-app"
             }
           ],
-          "version": "16.3.2",
-          "last_release": "2026-08-21"
+          "version": "16.3.3",
+          "last_release": "2026-08-25"
         },
         "create-t3-app": {
           "description": "Interactive CLI to start a typesafe Next.js app (the T3 Stack)",
@@ -670,8 +670,8 @@
           "execs": [
             "snyk"
           ],
-          "version": "1.1306.4",
-          "last_release": "2026-08-13"
+          "version": "1.1307.0",
+          "last_release": "2026-08-26"
         }
       }
     },
@@ -685,8 +685,8 @@
           "execs": [
             "cypress"
           ],
-          "version": "15.21.0",
-          "last_release": "2026-08-18"
+          "version": "15.21.1",
+          "last_release": "2026-08-25"
         },
         "jest": {
           "description": "Delightful JavaScript testing framework with a focus on simplicity",
@@ -694,8 +694,8 @@
           "execs": [
             "jest"
           ],
-          "version": "30.4.2",
-          "last_release": "2026-05-09"
+          "version": "30.5.0",
+          "last_release": "2026-08-28"
         },
         "mocha": {
           "description": "Feature-rich JavaScript test framework running on Node.js",
@@ -755,8 +755,8 @@
           "execs": [
             "tsx"
           ],
-          "version": "4.23.12",
-          "last_release": "2026-08-10"
+          "version": "4.23.13",
+          "last_release": "2026-08-30"
         },
         "typescript": {
           "description": "TypeScript language compiler and language server",
@@ -920,8 +920,8 @@
           "execs": [
             "lint-staged"
           ],
-          "version": "17.3.0",
-          "last_release": "2026-07-31"
+          "version": "17.4.1",
+          "last_release": "2026-08-27"
         },
         "semantic-release": {
           "description": "Fully automated version management and package publishing",
