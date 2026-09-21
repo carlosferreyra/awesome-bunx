@@ -34,8 +34,8 @@
           "execs": [
             "rollup"
           ],
-          "version": "4.63.2",
-          "last_release": "2026-09-12"
+          "version": "4.63.4",
+          "last_release": "2026-09-19"
         },
         "tsup": {
           "description": "Bundle TypeScript libraries with zero config, powered by esbuild",
@@ -83,8 +83,8 @@
               "description": "Lint and format the current project in one pass"
             }
           ],
-          "version": "2.5.13",
-          "last_release": "2026-09-10"
+          "version": "2.5.14",
+          "last_release": "2026-09-16"
         },
         "eslint": {
           "description": "Pluggable static analyzer for JavaScript and TypeScript",
@@ -92,8 +92,8 @@
           "execs": [
             "eslint"
           ],
-          "version": "10.10.0",
-          "last_release": "2026-09-04"
+          "version": "10.11.0",
+          "last_release": "2026-09-18"
         },
         "oxlint": {
           "description": "Fast JavaScript/TypeScript linter written in Rust",
@@ -101,8 +101,8 @@
           "execs": [
             "oxlint"
           ],
-          "version": "1.82.0",
-          "last_release": "2026-09-07"
+          "version": "1.83.0",
+          "last_release": "2026-09-14"
         },
         "prettier": {
           "description": "Opinionated code formatter supporting many languages",
@@ -116,8 +116,8 @@
               "description": "Format every supported file in the project"
             }
           ],
-          "version": "3.9.6",
-          "last_release": "2026-07-21"
+          "version": "3.9.8",
+          "last_release": "2026-09-17"
         },
         "standard": {
           "description": "JavaScript style guide, linter, and formatter — zero config",
@@ -140,8 +140,8 @@
           "execs": [
             "autoprefixer"
           ],
-          "version": "10.6.0",
-          "last_release": "2026-09-12"
+          "version": "10.6.1",
+          "last_release": "2026-09-15"
         },
         "postcss-cli": {
           "description": "Command line interface for PostCSS",
@@ -203,8 +203,8 @@
           "execs": [
             "drizzle-kit"
           ],
-          "version": "0.31.10",
-          "last_release": "2026-03-17"
+          "version": "0.31.11",
+          "last_release": "2026-09-21"
         },
         "knex": {
           "description": "SQL query builder and migration tool for Node.js",
@@ -255,8 +255,8 @@
           "execs": [
             "firebase"
           ],
-          "version": "15.30.0",
-          "last_release": "2026-09-09"
+          "version": "15.30.2",
+          "last_release": "2026-09-17"
         },
         "netlify-cli": {
           "description": "Netlify command-line tool for local development and deployment",
@@ -265,8 +265,8 @@
             "netlify",
             "ntl"
           ],
-          "version": "27.5.2",
-          "last_release": "2026-09-09"
+          "version": "27.8.0",
+          "last_release": "2026-09-16"
         },
         "serverless": {
           "description": "Build and deploy serverless applications to any cloud",
@@ -300,8 +300,8 @@
               "description": "Deploy the current directory to a preview URL"
             }
           ],
-          "version": "59.16.0",
-          "last_release": "2026-09-11"
+          "version": "59.23.2",
+          "last_release": "2026-09-18"
         },
         "wrangler": {
           "description": "Command-line tool for building with Cloudflare Workers and Pages",
@@ -309,8 +309,8 @@
           "execs": [
             "wrangler"
           ],
-          "version": "4.131.2",
-          "last_release": "2026-09-14"
+          "version": "4.135.0",
+          "last_release": "2026-09-18"
         }
       }
     },
@@ -423,8 +423,8 @@
           "execs": [
             "astro"
           ],
-          "version": "7.3.2",
-          "last_release": "2026-09-08"
+          "version": "7.3.3",
+          "last_release": "2026-09-16"
         },
         "create-astro": {
           "description": "Scaffold a new Astro project",
@@ -465,8 +465,8 @@
               "description": "Create a new SvelteKit project"
             }
           ],
-          "version": "0.17.0",
-          "last_release": "2026-07-31"
+          "version": "0.17.1",
+          "last_release": "2026-09-19"
         },
         "storybook": {
           "description": "Build and document UI components in isolation",
@@ -670,8 +670,8 @@
           "execs": [
             "snyk"
           ],
-          "version": "1.1307.2",
-          "last_release": "2026-09-09"
+          "version": "1.1307.3",
+          "last_release": "2026-09-18"
         }
       }
     },
@@ -685,8 +685,8 @@
           "execs": [
             "cypress"
           ],
-          "version": "16.0.0",
-          "last_release": "2026-09-01"
+          "version": "16.1.0",
+          "last_release": "2026-09-15"
         },
         "jest": {
           "description": "Delightful JavaScript testing framework with a focus on simplicity",
@@ -694,8 +694,8 @@
           "execs": [
             "jest"
           ],
-          "version": "30.5.1",
-          "last_release": "2026-09-01"
+          "version": "30.5.2",
+          "last_release": "2026-09-18"
         },
         "mocha": {
           "description": "Feature-rich JavaScript test framework running on Node.js",
@@ -704,8 +704,8 @@
             "mocha",
             "_mocha"
           ],
-          "version": "12.0.1",
-          "last_release": "2026-09-11"
+          "version": "12.0.2",
+          "last_release": "2026-09-17"
         },
         "playwright": {
           "description": "Reliable end-to-end testing across all modern browsers",
@@ -728,8 +728,8 @@
           "execs": [
             "vitest"
           ],
-          "version": "5.0.0",
-          "last_release": "2026-09-03"
+          "version": "5.0.1",
+          "last_release": "2026-09-15"
         }
       }
     },
@@ -755,8 +755,8 @@
           "execs": [
             "tsx"
           ],
-          "version": "4.23.13",
-          "last_release": "2026-08-30"
+          "version": "4.23.15",
+          "last_release": "2026-09-20"
         },
         "typescript": {
           "description": "TypeScript language compiler and language server",
@@ -803,8 +803,8 @@
               "description": "Run an audit on a URL and open the report in the browser"
             }
           ],
-          "version": "13.4.1",
-          "last_release": "2026-07-20"
+          "version": "13.5.0",
+          "last_release": "2026-09-18"
         },
         "size-limit": {
           "description": "Keep your JavaScript and CSS bundle size small",
@@ -812,8 +812,8 @@
           "execs": [
             "size-limit"
           ],
-          "version": "13.1.1",
-          "last_release": "2026-09-12"
+          "version": "14.0.0",
+          "last_release": "2026-09-15"
         },
         "webpack-bundle-analyzer": {
           "description": "Visualize the size of webpack output files with an interactive treemap",
@@ -821,8 +821,8 @@
           "execs": [
             "webpack-bundle-analyzer"
           ],
-          "version": "5.3.3",
-          "last_release": "2026-09-10"
+          "version": "5.4.0",
+          "last_release": "2026-09-17"
         }
       }
     },
