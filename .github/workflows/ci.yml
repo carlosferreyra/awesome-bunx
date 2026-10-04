@@ -45,6 +45,9 @@ jobs:
       - name: Test tools via bunx
         id: test
         continue-on-error: true
+        env:
+          # Husky treats --help as a hook directory; prevent hook installation.
+          HUSKY: '0'
         run: |
           if [ "${{ github.event_name }}" = "push" ]; then
             bun run scripts/test_clients.ts --diff HEAD~1 --output output.log
