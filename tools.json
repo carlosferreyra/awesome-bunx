@@ -34,8 +34,8 @@
           "execs": [
             "rollup"
           ],
-          "version": "4.63.5",
-          "last_release": "2026-09-24"
+          "version": "4.64.0",
+          "last_release": "2026-10-02"
         },
         "tsup": {
           "description": "Bundle TypeScript libraries with zero config, powered by esbuild",
@@ -62,8 +62,8 @@
               "description": "Produce a production build"
             }
           ],
-          "version": "8.3.1",
-          "last_release": "2026-09-24"
+          "version": "8.3.2",
+          "last_release": "2026-10-01"
         }
       }
     },
@@ -83,8 +83,8 @@
               "description": "Lint and format the current project in one pass"
             }
           ],
-          "version": "2.5.14",
-          "last_release": "2026-09-16"
+          "version": "2.5.15",
+          "last_release": "2026-09-30"
         },
         "eslint": {
           "description": "Pluggable static analyzer for JavaScript and TypeScript",
@@ -92,8 +92,8 @@
           "execs": [
             "eslint"
           ],
-          "version": "10.11.0",
-          "last_release": "2026-09-18"
+          "version": "10.12.0",
+          "last_release": "2026-10-02"
         },
         "oxlint": {
           "description": "Fast JavaScript/TypeScript linter written in Rust",
@@ -101,8 +101,8 @@
           "execs": [
             "oxlint"
           ],
-          "version": "1.86.0",
-          "last_release": "2026-09-28"
+          "version": "1.87.0",
+          "last_release": "2026-10-05"
         },
         "prettier": {
           "description": "Opinionated code formatter supporting many languages",
@@ -164,8 +164,8 @@
               "description": "Compile a Sass file to CSS"
             }
           ],
-          "version": "1.105.0",
-          "last_release": "2026-09-22"
+          "version": "1.105.1",
+          "last_release": "2026-09-29"
         },
         "stylelint": {
           "description": "Modern, powerful linter that helps you avoid errors and enforce CSS conventions",
@@ -173,8 +173,8 @@
           "execs": [
             "stylelint"
           ],
-          "version": "17.15.0",
-          "last_release": "2026-09-04"
+          "version": "17.16.0",
+          "last_release": "2026-10-01"
         },
         "tailwindcss": {
           "description": "Utility-first CSS framework with a standalone CLI",
@@ -231,8 +231,8 @@
               "description": "Create and apply a new development migration"
             }
           ],
-          "version": "8.0.0-rc.17",
-          "last_release": "2026-09-24"
+          "version": "8.0.0-rc.19",
+          "last_release": "2026-09-29"
         },
         "sequelize-cli": {
           "description": "Command-line interface for Sequelize ORM",
@@ -255,8 +255,8 @@
           "execs": [
             "firebase"
           ],
-          "version": "15.31.0",
-          "last_release": "2026-09-23"
+          "version": "15.32.1",
+          "last_release": "2026-09-30"
         },
         "netlify-cli": {
           "description": "Netlify command-line tool for local development and deployment",
@@ -265,8 +265,8 @@
             "netlify",
             "ntl"
           ],
-          "version": "27.10.0",
-          "last_release": "2026-09-25"
+          "version": "27.11.0",
+          "last_release": "2026-10-05"
         },
         "serverless": {
           "description": "Build and deploy serverless applications to any cloud",
@@ -300,8 +300,8 @@
               "description": "Deploy the current directory to a preview URL"
             }
           ],
-          "version": "60.1.3",
-          "last_release": "2026-09-26"
+          "version": "62.2.0",
+          "last_release": "2026-10-02"
         },
         "wrangler": {
           "description": "Command-line tool for building with Cloudflare Workers and Pages",
@@ -309,8 +309,8 @@
           "execs": [
             "wrangler"
           ],
-          "version": "4.142.0",
-          "last_release": "2026-09-27"
+          "version": "4.147.0",
+          "last_release": "2026-10-02"
         }
       }
     },
@@ -441,8 +441,8 @@
           "execs": [
             "next"
           ],
-          "version": "16.3.6",
-          "last_release": "2026-09-22"
+          "version": "16.3.8",
+          "last_release": "2026-09-30"
         },
         "nuxi": {
           "description": "Command-line interface for the Nuxt framework",
@@ -465,8 +465,8 @@
               "description": "Create a new SvelteKit project"
             }
           ],
-          "version": "0.17.1",
-          "last_release": "2026-09-19"
+          "version": "1.1.0",
+          "last_release": "2026-10-04"
         },
         "storybook": {
           "description": "Build and document UI components in isolation",
@@ -474,8 +474,8 @@
           "execs": [
             "storybook"
           ],
-          "version": "10.6.0",
-          "last_release": "2026-09-02"
+          "version": "10.6.1",
+          "last_release": "2026-09-29"
         }
       }
     },
@@ -532,8 +532,8 @@
           "execs": [
             "taze"
           ],
-          "version": "21.2.0",
-          "last_release": "2026-09-28"
+          "version": "21.3.0",
+          "last_release": "2026-09-30"
         }
       }
     },
@@ -601,8 +601,8 @@
               "description": "Create a new Next.js project named my-app"
             }
           ],
-          "version": "16.3.6",
-          "last_release": "2026-09-22"
+          "version": "16.3.8",
+          "last_release": "2026-09-30"
         },
         "create-t3-app": {
           "description": "Interactive CLI to start a typesafe Next.js app (the T3 Stack)",
@@ -685,8 +685,8 @@
           "execs": [
             "cypress"
           ],
-          "version": "16.1.0",
-          "last_release": "2026-09-15"
+          "version": "16.1.1",
+          "last_release": "2026-09-29"
         },
         "jest": {
           "description": "Delightful JavaScript testing framework with a focus on simplicity",
@@ -704,8 +704,8 @@
             "mocha",
             "_mocha"
           ],
-          "version": "12.0.2",
-          "last_release": "2026-09-17"
+          "version": "12.0.3",
+          "last_release": "2026-10-01"
         },
         "playwright": {
           "description": "Reliable end-to-end testing across all modern browsers",
@@ -728,8 +728,8 @@
           "execs": [
             "vitest"
           ],
-          "version": "5.0.2",
-          "last_release": "2026-09-25"
+          "version": "5.0.3",
+          "last_release": "2026-09-30"
         }
       }
     },
