@@ -6,25 +6,65 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: release-metadata-main
+  cancel-in-progress: false
 
 jobs:
   sync:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-slim
+    timeout-minutes: 20
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
+        with:
+          ref: main
 
       - name: Set up Bun
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
 
+      - name: Validate catalog before sync
+        run: bun run scripts/checks.ts
+
       - name: Fetch latest release info from npm
         run: bun run scripts/latest_release.ts
 
-      - name: Commit changes if any
-        uses: stefanzweifel/git-auto-commit-action@v7
+      - name: Validate updated catalog
+        run: bun run scripts/checks.ts
+
+      - name: Generate and check README
+        run: |
+          bun run scripts/readme.ts
+          bun run scripts/readme.ts --check
+
+      - name: Commit and push metadata changes
+        shell: bash
+        run: |
+          if git diff --quiet -- tools.json README.md; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- tools.json README.md
+          git commit -m 'chore(tools): sync latest npm release metadata [skip ci]'
+          git push origin HEAD:main
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+
+      - name: Upload failure details
+        if: failure()
+        uses: actions/upload-artifact@v7
         with:
-          commit_message: 'chore(tools): sync latest npm release metadata [skip ci]'
-          file_pattern: tools.json
+          name: release-sync-failure
+          path: |
+            checks.log
+            tools.json
+            README.md
+          retention-days: 30

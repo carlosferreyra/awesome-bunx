@@ -1,7 +1,7 @@
 # Awesome BUNX
 
 <div align="center">
-    <img src="https://github.com/oven-sh/awesome-bun/blob/main/awesome-bun.png" alt="Awesome">
+    <img width="500" height="350" src="https://github.com/sindresorhus/awesome/raw/main/media/logo.svg" alt="Awesome">
     <br>
     <a href="https://awesome.re">
         <img src="https://awesome.re/badge.svg" alt="Awesome">
@@ -17,26 +17,44 @@
         <img src="https://img.shields.io/github/stars/carlosferreyra/awesome-bunx" alt="Stars">
     </p>
     <a href="https://github.com/carlosferreyra/awesome-bunx/actions/workflows/ci.yml">
-        <img src="https://github.com/carlosferreyra/awesome-bunx/actions/workflows/ci.yml/badge.svg" alt="Validation and Sync">
+        <img src="https://github.com/carlosferreyra/awesome-bunx/actions/workflows/ci.yml/badge.svg" alt="Catalog Validation and Tool Checks">
     </a>
 </div>
 
-Inspired by <a href="https://github.com/carlosferreyra/awesome-uvx">awesome-uvx</a> and
+Inspired by <a href="https://github.com/carlosferreyra/awesome-uvx">awesome-uvx</a>,
+<a href="https://github.com/carlosferreyra/awesome-cargo-install">awesome-cargo-install</a> and
 <a href="https://github.com/oven-sh/awesome-bun">awesome-bun</a>.
 
+**{{ total_tools }} tools across {{ categories | length }} categories.**
+
+## Contents
 
 {% for category in categories %}
-- [{{ category.name }}](#{{ category.slug }})
-{% endfor %}
+- [{{ category.name }}](#{{ category.slug }}) ({{ category.tools | length }})
+{%- endfor %}
 
 {% for category in categories %}
+<a id="{{ category.slug }}"></a>
+
 ## {{ category.name }}
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-{% for pkg_name, pkg in category.tools %}| [{{ pkg_name }}]({{ pkg.url }}) | {{ pkg.description }}{% if pkg.examples %}<br><details><summary><strong><a href="#">Examples</a></strong></summary>{% for ex in pkg.examples %}<br>`{{ ex.cmd | escape_pipe }}`{% if ex.description %} — {{ ex.description }}{% endif %}{% endfor %}<br></details>{% endif %} | {% for exec in pkg.execs %}```{{ exec }}```{% if not loop.last %}, {% endif %}{% endfor %} | {% if pkg.version %}{{ pkg.version }}<br>{{ pkg.last_release }}{% else %}—{% endif %} |
+{% for pkg_name, pkg in category.tools %}| [{{ pkg_name }}]({{ pkg.url }}) | {{ pkg.description | escape_pipe }} | {% for exec in pkg.execs %}`{{ exec }}`{% if not loop.last %}, {% endif %}{% endfor %} | {% if pkg.version %}{{ pkg.version }}{% if pkg.last_release %}<br>{{ pkg.last_release }}{% endif %}{% else %}—{% endif %} |
 {% endfor %}
+{% for pkg_name, pkg in category.tools %}{% if pkg.examples %}
+<details>
+<summary>{{ pkg_name }} examples</summary>
 
+{% for ex in pkg.examples %}{% if ex.description %}{{ ex.description }}
+
+{% endif %}```sh
+{{ ex.cmd }}
+```
+
+{% endfor %}</details>
+
+{% endif %}{% endfor %}
 {% endfor %}
 
 ## Contributing

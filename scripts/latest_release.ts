@@ -43,7 +43,10 @@ async function fetchLatest(pkg: string): Promise<{ version: string; date: string
 			'time'?: Record<string, string>;
 		};
 		const version = info['dist-tags']?.latest;
-		if (!version) return null;
+		if (!version) {
+			console.warn(`Failed to fetch ${pkg}: no latest version`);
+			return null;
+		}
 		const t = info.time?.[version];
 		const date = t ? t.slice(0, 10) : null;
 		return { version, date };
@@ -55,6 +58,7 @@ async function fetchLatest(pkg: string): Promise<{ version: string; date: string
 
 async function main(): Promise<void> {
 	const data = JSON.parse(readFileSync(TOOLS_JSON, 'utf8')) as ToolsFile;
+	const failed: string[] = [];
 
 	for (const category of data.categories) {
 		for (const [name, tool] of Object.entries(category.tools)) {
@@ -64,7 +68,10 @@ async function main(): Promise<void> {
 			}
 
 			const result = await fetchLatest(name);
-			if (!result) continue;
+			if (!result) {
+				failed.push(name);
+				continue;
+			}
 
 			tool.version = result.version;
 			if (result.date) tool.last_release = result.date;
@@ -74,6 +81,10 @@ async function main(): Promise<void> {
 
 	writeFileSync(TOOLS_JSON, JSON.stringify(data, null, 2) + '\n');
 	console.log('tools.json updated.');
+	if (failed.length > 0) {
+		console.error(`Release metadata sync incomplete: ${failed.join(', ')}`);
+		process.exitCode = 1;
+	}
 }
 
 await main();

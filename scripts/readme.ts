@@ -8,6 +8,7 @@
  *
  * Usage:
  *   bun run scripts/readme.ts
+ *   bun run scripts/readme.ts --check
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
@@ -46,6 +47,10 @@ function sortTools(tools: Record<string, Tool>): [string, Tool][] {
 }
 
 function generateReadme(): void {
+	const args = process.argv.slice(2);
+	if (args.some((arg) => arg !== '--check')) {
+		throw new Error('Usage: bun run scripts/readme.ts [--check]');
+	}
 	const categories = loadCategories();
 
 	const rendered = categories.map((cat) => ({
@@ -67,8 +72,15 @@ function generateReadme(): void {
 		total_tools: totalTools,
 	});
 
-	writeFileSync(README_PATH, content);
-	console.log(`Successfully generated README at ${README_PATH}`);
+	if (args.includes('--check')) {
+		if (readFileSync(README_PATH, 'utf8') !== content) {
+			throw new Error('README.md is stale. Run `bun run scripts/readme.ts` and commit the result.');
+		}
+		console.log('README.md is up to date.');
+	} else {
+		writeFileSync(README_PATH, content);
+		console.log(`Successfully generated README at ${README_PATH}`);
+	}
 }
 
 try {
