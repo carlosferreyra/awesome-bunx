@@ -105,6 +105,23 @@ Guidelines for writing good examples:
 - Prefer short, realistic commands over exhaustive flag lists
 - Add multiple examples only when they demonstrate meaningfully different use cases
 
+### Choosing a Category
+
+Choose one existing category based on the tool's primary purpose. Categories reflect this npm
+catalog; they do not need to match the Python or Rust lists.
+
+- **Scaffolding & Generators** covers project starters and source-file generators. A
+  framework-specific starter can also fit **Frontend Frameworks & Tools** when grouped with its
+  framework's CLI; explain that choice in the PR.
+- **Frontend Frameworks & Tools** covers framework development, build, and component workflows.
+- **Version Control & Git** covers commit conventions, Git hooks, and release automation tied to
+  Git, including `commitizen` and `semantic-release`.
+- **Package Management** covers dependency inspection, upgrades, and package cleanup.
+
+Keep category-only reorganizations separate from adding tools. When two categories fit, explain
+the main use case in the PR. Preserve existing category slugs when changing display names so
+README links keep working.
+
 ### Adding a New Category
 
 If your tool doesn't fit any existing category, add a new object to the `"categories"` array:
@@ -134,6 +151,17 @@ GitHub Actions validates the catalog, tests the maintenance scripts, and checks 
 on relevant pull requests and pushes. Ordinary validation is read-only and reports a stale
 README rather than rewriting it. The tool-validation workflow also tests newly added packages
 via `bunx` on catalog pull requests.
+
+### Choosing a Pull Request Template
+
+Use the template that best matches your change:
+
+- [Add a new tool](https://github.com/carlosferreyra/awesome-bunx/compare/main...main?quick_pull=1&template=add-tool.md)
+- [Update existing tool metadata](https://github.com/carlosferreyra/awesome-bunx/compare/main...main?quick_pull=1&template=update-tool.md)
+- [Repo maintenance or refactor](https://github.com/carlosferreyra/awesome-bunx/compare/main...main?quick_pull=1&template=repo-maintenance.md)
+
+Choose your branch as the compare branch after opening the link. If none of these fit, use the
+default PR template and explain the change clearly.
 
 ## README Generation and Release Sync
 
