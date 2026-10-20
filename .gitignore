@@ -56,3 +56,7 @@ ehthumbs_vista.db
 [Dd]esktop.ini
 $RECYCLE.BIN/
 *.lnk
+
+# Python validation-test caches
+__pycache__/
+*.py[cod]
