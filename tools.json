@@ -176,20 +176,18 @@
           "version": "17.16.0",
           "last_release": "2026-10-01"
         },
-        "tailwindcss": {
-          "description": "Utility-first CSS framework with a standalone CLI",
-          "url": "https://tailwindcss.com/",
+        "@tailwindcss/cli": {
+          "description": "Compile Tailwind CSS stylesheets with the official CLI",
+          "url": "https://tailwindcss.com/docs/installation/tailwind-cli",
           "execs": [
             "tailwindcss"
           ],
           "examples": [
             {
-              "cmd": "bunx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-              "description": "Watch and compile Tailwind styles to a CSS file"
+              "cmd": "bunx --package @tailwindcss/cli tailwindcss -i ./src/input.css -o ./dist/output.css",
+              "description": "Requires tailwindcss installed in the project and an input stylesheet importing it"
             }
-          ],
-          "version": "4.3.3",
-          "last_release": "2026-07-16"
+          ]
         }
       }
     },
@@ -483,15 +481,6 @@
       "name": "Package Management",
       "slug": "package-management",
       "tools": {
-        "depcheck": {
-          "description": "Detect unused dependencies in a project",
-          "url": "https://github.com/depcheck/depcheck",
-          "execs": [
-            "depcheck"
-          ],
-          "version": "1.4.7",
-          "last_release": "2023-10-17"
-        },
         "npkill": {
           "description": "Find and remove node_modules directories to free disk space",
           "url": "https://npkill.js.org/",
@@ -534,6 +523,33 @@
           ],
           "version": "21.3.0",
           "last_release": "2026-09-30"
+        },
+        "knip": {
+          "description": "Find unused dependencies, files, and exports in JavaScript and TypeScript projects",
+          "url": "https://knip.dev/",
+          "execs": [
+            "knip",
+            "knip-bun"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx knip --dependencies",
+              "description": "Analyze an existing project for unused dependencies; requires a supported Node 20.19+/22.12+ version"
+            }
+          ]
+        },
+        "publint": {
+          "description": "Check npm package exports and published files for compatibility problems",
+          "url": "https://publint.dev/",
+          "execs": [
+            "publint"
+          ],
+          "examples": [
+            {
+              "cmd": "bunx publint ./packages/my-library",
+              "description": "Lint an already-built library package; requires Node 18 or newer"
+            }
+          ]
         }
       }
     },
@@ -574,14 +590,23 @@
           "version": "6.2.3",
           "last_release": "2026-10-09"
         },
-        "swagger-cli": {
-          "description": "Validate, bundle, and manage Swagger/OpenAPI files",
-          "url": "https://github.com/APIDevTools/swagger-cli",
+        "@redocly/cli": {
+          "description": "Lint and bundle OpenAPI descriptions with configurable validation rules",
+          "url": "https://redocly.com/docs/cli/",
           "execs": [
-            "swagger-cli"
+            "openapi",
+            "redocly"
           ],
-          "version": "4.0.4",
-          "last_release": "2020-07-19"
+          "examples": [
+            {
+              "cmd": "bunx --package @redocly/cli redocly lint --extends=minimal openapi.yml",
+              "description": "Validate using the minimal ruleset; requires a supported Node 20.19+/22.12+ version and npm 10+"
+            },
+            {
+              "cmd": "bunx --package @redocly/cli redocly bundle openapi.yml -o bundled.yml",
+              "description": "Bundle an OpenAPI description and its referenced files"
+            }
+          ]
         }
       }
     },
@@ -701,8 +726,7 @@
           "description": "Feature-rich JavaScript test framework running on Node.js",
           "url": "https://mochajs.org/",
           "execs": [
-            "mocha",
-            "_mocha"
+            "mocha"
           ],
           "version": "12.0.3",
           "last_release": "2026-10-01"

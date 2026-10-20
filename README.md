@@ -25,7 +25,7 @@ Inspired by <a href="https://github.com/carlosferreyra/awesome-uvx">awesome-uvx<
 <a href="https://github.com/carlosferreyra/awesome-cargo-install">awesome-cargo-install</a> and
 <a href="https://github.com/oven-sh/awesome-bun">awesome-bun</a>.
 
-**79 tools across 18 categories.**
+**80 tools across 18 categories.**
 
 ## Contents
 
@@ -38,7 +38,7 @@ Inspired by <a href="https://github.com/carlosferreyra/awesome-uvx">awesome-uvx<
 - [Development Tools](#development-tools) (5)
 - [Documentation](#documentation) (3)
 - [Frontend Frameworks & Tools](#frontend-frameworks-and-tools) (6)
-- [Package Management](#package-management) (5)
+- [Package Management](#package-management) (6)
 - [API & HTTP Tools](#api-and-http-tools) (4)
 - [Scaffolding & Generators](#scaffolding-and-generators) (5)
 - [Security](#security) (3)
@@ -138,11 +138,23 @@ bunx prettier --write .
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
+| [@tailwindcss/cli](https://tailwindcss.com/docs/installation/tailwind-cli) | Compile Tailwind CSS stylesheets with the official CLI | `tailwindcss` | — |
 | [autoprefixer](https://github.com/postcss/autoprefixer) | PostCSS plugin to parse CSS and add vendor prefixes | `autoprefixer` | 10.6.1<br>2026-09-15 |
 | [postcss-cli](https://github.com/postcss/postcss-cli) | Command line interface for PostCSS | `postcss` | 12.0.0<br>2026-09-04 |
 | [sass](https://sass-lang.com/) | Reference implementation of Sass written in Dart | `sass` | 1.105.2<br>2026-10-16 |
 | [stylelint](https://stylelint.io/) | Modern, powerful linter that helps you avoid errors and enforce CSS conventions | `stylelint` | 17.16.0<br>2026-10-01 |
-| [tailwindcss](https://tailwindcss.com/) | Utility-first CSS framework with a standalone CLI | `tailwindcss` | 4.3.3<br>2026-07-16 |
+
+
+<details>
+<summary>@tailwindcss/cli examples</summary>
+
+Requires tailwindcss installed in the project and an input stylesheet importing it
+
+```sh
+bunx --package @tailwindcss/cli tailwindcss -i ./src/input.css -o ./dist/output.css
+```
+
+</details>
 
 
 <details>
@@ -152,18 +164,6 @@ Compile a Sass file to CSS
 
 ```sh
 bunx sass input.scss output.css
-```
-
-</details>
-
-
-<details>
-<summary>tailwindcss examples</summary>
-
-Watch and compile Tailwind styles to a CSS file
-
-```sh
-bunx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 ```
 
 </details>
@@ -311,11 +311,24 @@ bunx sv create my-app
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [depcheck](https://github.com/depcheck/depcheck) | Detect unused dependencies in a project | `depcheck` | 1.4.7<br>2023-10-17 |
+| [knip](https://knip.dev/) | Find unused dependencies, files, and exports in JavaScript and TypeScript projects | `knip`, `knip-bun` | — |
 | [npkill](https://npkill.js.org/) | Find and remove node_modules directories to free disk space | `npkill` | 0.12.2<br>2024-06-08 |
 | [npm-check](https://github.com/dylang/npm-check) | Check for outdated, incorrect and unused dependencies | `npm-check` | 6.0.1<br>2022-07-16 |
 | [npm-check-updates](https://github.com/raineorshine/npm-check-updates) | Upgrade package.json dependencies to the latest versions | `ncu`, `npm-check-updates` | 23.1.1<br>2026-10-10 |
+| [publint](https://publint.dev/) | Check npm package exports and published files for compatibility problems | `publint` | — |
 | [taze](https://github.com/antfu/taze) | Modern cli tool that keeps deps fresh | `taze` | 21.3.0<br>2026-09-30 |
+
+
+<details>
+<summary>knip examples</summary>
+
+Analyze an existing project for unused dependencies; requires a supported Node 20.19+/22.12+ version
+
+```sh
+bunx knip --dependencies
+```
+
+</details>
 
 
 <details>
@@ -330,6 +343,18 @@ bunx npm-check-updates -u
 </details>
 
 
+<details>
+<summary>publint examples</summary>
+
+Lint an already-built library package; requires Node 18 or newer
+
+```sh
+bunx publint ./packages/my-library
+```
+
+</details>
+
+
 
 <a id="api-and-http-tools"></a>
 
@@ -338,9 +363,9 @@ bunx npm-check-updates -u
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
 | [@openapitools/openapi-generator-cli](https://openapi-generator.tech/) | Generate API clients, server stubs, and documentation from OpenAPI specs | `openapi-generator-cli` | 2.41.0<br>2026-08-24 |
+| [@redocly/cli](https://redocly.com/docs/cli/) | Lint and bundle OpenAPI descriptions with configurable validation rules | `openapi`, `redocly` | — |
 | [json-server](https://github.com/typicode/json-server) | Full fake REST API with zero coding in seconds | `json-server` | 1.0.0-beta.15<br>2026-03-23 |
 | [newman](https://github.com/postmanlabs/newman) | Command-line collection runner for Postman | `newman` | 6.2.3<br>2026-10-09 |
-| [swagger-cli](https://github.com/APIDevTools/swagger-cli) | Validate, bundle, and manage Swagger/OpenAPI files | `swagger-cli` | 4.0.4<br>2020-07-19 |
 
 
 <details>
@@ -350,6 +375,24 @@ Generate a TypeScript Axios client from an OpenAPI spec
 
 ```sh
 bunx --package @openapitools/openapi-generator-cli openapi-generator-cli generate -i spec.yaml -g typescript-axios -o ./client
+```
+
+</details>
+
+
+<details>
+<summary>@redocly/cli examples</summary>
+
+Validate using the minimal ruleset; requires a supported Node 20.19+/22.12+ version and npm 10+
+
+```sh
+bunx --package @redocly/cli redocly lint --extends=minimal openapi.yml
+```
+
+Bundle an OpenAPI description and its referenced files
+
+```sh
+bunx --package @redocly/cli redocly bundle openapi.yml -o bundled.yml
 ```
 
 </details>
@@ -402,7 +445,7 @@ bunx create-next-app@latest my-app
 |:-----|:------------|:--------------|:--------------|
 | [cypress](https://www.cypress.io/) | End-to-end testing framework for anything that runs in a browser | `cypress` | 16.2.0<br>2026-10-14 |
 | [jest](https://jestjs.io/) | Delightful JavaScript testing framework with a focus on simplicity | `jest` | 30.5.2<br>2026-09-18 |
-| [mocha](https://mochajs.org/) | Feature-rich JavaScript test framework running on Node.js | `mocha`, `_mocha` | 12.0.3<br>2026-10-01 |
+| [mocha](https://mochajs.org/) | Feature-rich JavaScript test framework running on Node.js | `mocha` | 12.0.3<br>2026-10-01 |
 | [playwright](https://playwright.dev/) | Reliable end-to-end testing across all modern browsers | `playwright` | 1.64.1<br>2026-10-14 |
 | [vitest](https://vitest.dev/) | Blazing fast unit-test framework powered by Vite | `vitest` | 5.0.5<br>2026-10-15 |
 
