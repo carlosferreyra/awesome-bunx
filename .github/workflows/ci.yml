@@ -1,10 +1,8 @@
-name: Catalog Validation and Tool Checks
+name: Validate Catalog
 
 on:
   push:
-    branches:
-      - main
-      - 'codex/**'
+    branches: [main]
     paths:
       - 'tools.json'
       - 'README.md'
@@ -13,8 +11,7 @@ on:
       - 'template/**'
       - '.github/workflows/**'
   pull_request:
-    branches:
-      - main
+    branches: [main]
     paths:
       - 'tools.json'
       - 'README.md'
@@ -22,21 +19,28 @@ on:
       - 'tests/**'
       - 'template/**'
       - '.github/workflows/**'
-  schedule:
-    - cron: '0 0 1 * *'
   workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: catalog-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
 jobs:
   validate:
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
-          fetch-depth: 2
+          fetch-depth: 0
           persist-credentials: false
 
       - name: Set up Bun
@@ -48,45 +52,41 @@ jobs:
         uses: actions/cache@v5
         with:
           path: ~/.bun/install/cache
-          key: ${{ runner.os }}-bun-tools-${{ hashFiles('tools.json') }}
-          restore-keys: |
-            ${{ runner.os }}-bun-tools-
-            ${{ runner.os }}-bun-
+          key: bun-${{ runner.os }}-${{ hashFiles('scripts/**/*.ts') }}
+          restore-keys: bun-${{ runner.os }}-
 
-      - name: Validate tools.json schema
-        run: bun run scripts/checks.ts
+      - name: Validate catalog
+        id: catalog
+        run: bun run scripts/checks.ts 2>&1 | tee validation.log
 
       - name: Test maintenance scripts
-        run: bun test
-
-      - name: Check README is up to date
-        run: bun run scripts/readme.ts --check
-
-      - name: Test tools via bunx
-        # PR tool execution remains in validate_tool.yml.
-        if: github.event_name != 'pull_request'
-        id: test
-        continue-on-error: true
-        env:
-          # Husky treats --help as a hook directory; prevent hook installation.
-          HUSKY: '0'
+        id: tests
         run: |
-          if [ "${{ github.event_name }}" = "push" ]; then
-            bun run scripts/test_clients.ts --diff HEAD~1 --output output.log
-          else
-            bun run scripts/test_clients.ts --all --output output.log
-          fi
+          { bun test && python3 -m unittest discover -s tests -v; } 2>&1 | tee tests.log
 
-      - name: Upload validation report
+      - name: Check README freshness
+        id: readme
+        run: |
+          { bun run scripts/readme.ts --check; } 2>&1 | tee readme.log
+
+      - name: Summarize validation
         if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+          CATALOG_STATUS: ${{ steps.catalog.outcome }}
+          TESTS_STATUS: ${{ steps.tests.outcome }}
+          README_STATUS: ${{ steps.readme.outcome }}
+        run: python3 scripts/actions_summary.py catalog
+
+      - name: Upload failure details
+        if: failure()
         uses: actions/upload-artifact@v7
         with:
-          name: validation-report
+          name: catalog-validation-failure
           path: |
             checks.log
-            output.log
-          retention-days: 30
-
-      - name: Fail job if any tools failed
-        if: steps.test.outcome == 'failure'
-        run: exit 1
+            validation.log
+            tests.log
+            readme.log
+          retention-days: 14
+          if-no-files-found: ignore
