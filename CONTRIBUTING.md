@@ -181,8 +181,9 @@ Keep the slug lowercase, hyphen-separated, and consistent with the name.
 
 GitHub Actions validates the catalog, tests the maintenance scripts, and checks README freshness
 on relevant pull requests and pushes. Ordinary validation is read-only and reports a stale
-README rather than rewriting it. The tool-validation workflow also tests newly added packages
-via `bunx` on catalog pull requests.
+README rather than rewriting it. The separate **Validate Installs** workflow tests newly added packages
+via `bunx` on catalog pull requests. It reports failures in job summaries and artifacts without
+commenting on or approving the PR.
 
 ### Choosing a Pull Request Template
 
@@ -213,6 +214,7 @@ bun run scripts/readme.ts --check
 
 # Test maintenance scripts without installing catalog tools
 bun test
+python3 -m unittest discover -s tests -v
 ```
 
 Release sync runs every Monday at 06:00 UTC or manually on `main`. It validates the catalog,
@@ -233,6 +235,32 @@ Your contribution will be automatically checked for:
 - Non-empty executable list
 - Valid JSON structure
 - Successful installation and invocation via `bunx`
+
+## Validation Workflow Structure
+
+All three catalogs separate fast checks from installation work:
+
+- **Validate Catalog** (`ci.yml`) runs on relevant PRs, pushes to `main`, and manual requests.
+  It validates the catalog, runs maintenance-script tests, and checks generated README freshness.
+  The job has a 20-minute timeout and does not install catalog packages.
+- **Validate Installs** (`validate_installs.yml`) performs package installation checks separately.
+  Manual runs accept an optional `base_ref`: leave it empty for the full catalog, or provide a
+  Git ref to select newly added package names relative to that commit. Changes to existing
+  entries and examples still need targeted maintainer validation.
+- Both validation workflows use read-only repository permissions, discard checkout credentials,
+  write an Actions summary even after failure, and upload available failure logs for 14 days.
+  Missing/partial reports are shown as incomplete; they are not treated as successful coverage.
+  Validation never approves or merges PRs and does not require permission to post comments.
+
+UVX and Bunx run install checks automatically for relevant PRs and run a full check on the
+first day of each month at 00:00 UTC. Their install jobs have a 30-minute timeout.
+
+A green installation check is limited to the probes implemented by the ecosystem validator;
+it does not prove every documented command or platform works. Use meaningful fixtures before
+accepting a candidate. Job timeouts and permission failures require inspecting the logs; they
+do not by themselves establish that a catalog tool is broken.
+
+Release-metadata publication keeps this repository's existing behavior and schedule.
 
 ## Code of Conduct
 

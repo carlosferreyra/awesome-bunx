@@ -25,7 +25,7 @@ import { parseArgs } from 'node:util';
 type InputTool = { package: string; execs?: string[] };
 type Result =
 	| { package: string; success: true }
-	| { package: string; success: false; reason: string };
+	| { package: string; success: false; reason: string; details: string };
 
 const NETWORK_PATTERNS =
 	/(failed to fetch|connection error|could not connect|network|timeout|timed out|ssl error|ssl.{0,20}certificate|self.signed.certificate|certificate.{0,20}(?:error|fail|invalid|expired|verify)|http 5\d\d|503|502|504|etimedout|econnreset|econnrefused)/i;
@@ -61,24 +61,21 @@ function run(command: string, args: string[]): RunResult {
 }
 
 function ranSuccessfully(result: RunResult): boolean {
-	if (result.exitCode === 0) return true;
-	const out = result.stdout + result.stderr;
-	if (NETWORK_PATTERNS.test(out)) return false;
-	if (NOT_FOUND_PATTERNS.test(out)) return false;
-	if (BINARY_PATTERNS.test(out)) return false;
-	return out.trim().length > 0;
+	return result.exitCode === 0;
 }
 
-function testTool(pkg: string, execName: string): { success: boolean; failureType: string } {
+function testTool(pkg: string, execName: string): { success: boolean; failureType: string; details: string } {
 	const attempt1 = run('bunx', ['--package', pkg, execName, '--help']);
-	if (ranSuccessfully(attempt1)) return { success: true, failureType: '' };
+	if (ranSuccessfully(attempt1)) return { success: true, failureType: '', details: '' };
 
 	const out1 = attempt1.stdout + attempt1.stderr;
+	let details = `bunx --package ${pkg} ${execName} --help\n${out1}\n`;
 
 	if (NETWORK_PATTERNS.test(out1)) {
 		const retry = run('bunx', ['--package', pkg, execName, '--help']);
-		if (ranSuccessfully(retry)) return { success: true, failureType: '' };
-		return { success: false, failureType: 'network' };
+		details += `Retry\n${retry.stdout}${retry.stderr}\n`;
+		if (ranSuccessfully(retry)) return { success: true, failureType: '', details: '' };
+		return { success: false, failureType: 'network', details };
 	}
 
 	// Tools that treat every argument as a sub-command (e.g. cross-env) crash with a
@@ -86,15 +83,17 @@ function testTool(pkg: string, execName: string): { success: boolean; failureTyp
 	// invocation: if it exits 0 the binary is installed and working correctly.
 	if (SPAWN_ENOENT_PATTERNS.test(out1)) {
 		const noArgs = run('bunx', ['--package', pkg, execName]);
-		if (noArgs.exitCode === 0) return { success: true, failureType: '' };
+		details += `No-argument probe\n${noArgs.stdout}${noArgs.stderr}\n`;
+		if (noArgs.exitCode === 0) return { success: true, failureType: '', details: '' };
 	}
 
 	const attempt2 = run('bunx', [pkg, '--help']);
-	if (ranSuccessfully(attempt2)) return { success: true, failureType: '' };
+	details += `bunx ${pkg} --help\n${attempt2.stdout}${attempt2.stderr}\n`;
+	if (ranSuccessfully(attempt2)) return { success: true, failureType: '', details: '' };
 
 	const combinedOut = attempt1.stdout + attempt2.stdout;
 	const combinedErr = attempt1.stderr + attempt2.stderr;
-	return { success: false, failureType: classifyFailure(combinedOut, combinedErr) };
+	return { success: false, failureType: classifyFailure(combinedOut, combinedErr), details };
 }
 
 type Tool = { execs: string[] };
@@ -170,14 +169,15 @@ function main(): void {
 
 		console.log(`  Testing: ${pkg} (${execName})`);
 
-		const { success, failureType } = testTool(pkg, execName);
+		const { success, failureType, details } = testTool(pkg, execName);
 
 		if (success) {
 			console.log('    ✓ ok');
 			results.push({ package: pkg, success: true });
 		} else {
 			console.log(`    ✗ failed (${failureType})`);
-			results.push({ package: pkg, success: false, reason: failureType });
+			console.error(details);
+			results.push({ package: pkg, success: false, reason: failureType, details });
 		}
 	}
 
