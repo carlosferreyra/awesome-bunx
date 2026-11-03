@@ -47,7 +47,7 @@
           "last_release": "2026-10-14"
         },
         "vite": {
-          "description": "Next generation frontend tooling — instant dev server and optimized builds",
+          "description": "Next generation frontend tooling \u2014 instant dev server and optimized builds",
           "url": "https://vitejs.dev/",
           "execs": [
             "vite"
@@ -120,7 +120,7 @@
           "last_release": "2026-10-10"
         },
         "standard": {
-          "description": "JavaScript style guide, linter, and formatter — zero config",
+          "description": "JavaScript style guide, linter, and formatter \u2014 zero config",
           "url": "https://standardjs.com/",
           "execs": [
             "standard"
@@ -198,7 +198,7 @@
       "slug": "database-tools",
       "tools": {
         "drizzle-kit": {
-          "description": "CLI companion for Drizzle ORM — migrations and schema management",
+          "description": "CLI companion for Drizzle ORM \u2014 migrations and schema management",
           "url": "https://orm.drizzle.team/",
           "execs": [
             "drizzle-kit"
@@ -454,7 +454,7 @@
           "last_release": "2026-10-09"
         },
         "sv": {
-          "description": "Official Svelte CLI — scaffold and manage SvelteKit projects",
+          "description": "Official Svelte CLI \u2014 scaffold and manage SvelteKit projects",
           "url": "https://svelte.dev/docs/cli/overview",
           "execs": [
             "sv"
@@ -782,7 +782,7 @@
           "last_release": "2023-12-08"
         },
         "tsx": {
-          "description": "Run TypeScript and ESM files directly — drop-in node replacement",
+          "description": "Run TypeScript and ESM files directly \u2014 drop-in node replacement",
           "url": "https://tsx.is/",
           "execs": [
             "tsx"
@@ -791,15 +791,14 @@
           "last_release": "2026-09-20"
         },
         "typescript": {
-          "description": "TypeScript language compiler and language server",
+          "description": "TypeScript language compiler",
           "url": "https://www.typescriptlang.org/",
           "execs": [
-            "tsc",
-            "tsserver"
+            "tsc"
           ],
           "examples": [
             {
-              "cmd": "bunx tsc --init",
+              "cmd": "bunx --package typescript tsc --init",
               "description": "Generate a tsconfig.json in the current directory"
             }
           ],
@@ -866,8 +865,7 @@
           "description": "Simple, zero-configuration command-line HTTP server",
           "url": "https://github.com/http-party/http-server",
           "execs": [
-            "http-server",
-            "hs"
+            "http-server"
           ],
           "version": "14.1.1",
           "last_release": "2022-05-31"
@@ -897,13 +895,19 @@
           "last_release": "2021-09-18"
         },
         "npkg": {
-          "description": "Inspect packages from the npm registry from the terminal",
-          "url": "https://github.com/cutenode/npkg",
+          "description": "Legacy installer generator for Node.js applications; requires tar, Java, and Python to build installers, and Java to run them",
+          "url": "https://github.com/wearefractal/npkg",
           "execs": [
             "npkg"
           ],
           "version": "0.0.6",
-          "last_release": "2011-10-04"
+          "last_release": "2011-10-04",
+          "examples": [
+            {
+              "cmd": "bunx npkg ./my-app ./installers",
+              "description": "Generate installers from an application directory containing package.json; legacy tool, current-platform compatibility is unverified"
+            }
+          ]
         },
         "serve": {
           "description": "Static file serving and directory listing",
@@ -927,7 +931,7 @@
       "slug": "version-control-and-git",
       "tools": {
         "commitizen": {
-          "description": "Create commits that follow a specified format — interactive CLI",
+          "description": "Create commits that follow a specified format \u2014 interactive CLI",
           "url": "https://commitizen-tools.github.io/commitizen/",
           "execs": [
             "cz",

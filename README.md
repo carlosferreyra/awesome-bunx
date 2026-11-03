@@ -471,7 +471,7 @@ bunx playwright install
 |:-----|:------------|:--------------|:--------------|
 | [ts-node](https://typestrong.org/ts-node/) | TypeScript execution and REPL for Node.js | `ts-node`, `ts-node-esm`, `ts-node-script`, `ts-node-transpile-only` | 10.9.2<br>2023-12-08 |
 | [tsx](https://tsx.is/) | Run TypeScript and ESM files directly — drop-in node replacement | `tsx` | 4.23.15<br>2026-09-20 |
-| [typescript](https://www.typescriptlang.org/) | TypeScript language compiler and language server | `tsc`, `tsserver` | 7.0.2<br>2026-07-08 |
+| [typescript](https://www.typescriptlang.org/) | TypeScript language compiler | `tsc` | 7.0.2<br>2026-07-08 |
 
 
 <details>
@@ -480,7 +480,7 @@ bunx playwright install
 Generate a tsconfig.json in the current directory
 
 ```sh
-bunx tsc --init
+bunx --package typescript tsc --init
 ```
 
 </details>
@@ -518,10 +518,10 @@ bunx lighthouse https://example.com --view
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [http-server](https://github.com/http-party/http-server) | Simple, zero-configuration command-line HTTP server | `http-server`, `hs` | 14.1.1<br>2022-05-31 |
+| [http-server](https://github.com/http-party/http-server) | Simple, zero-configuration command-line HTTP server | `http-server` | 14.1.1<br>2022-05-31 |
 | [kill-port](https://github.com/tiaanduplessis/kill-port) | Kill the process bound to a given port | `kill-port` | 2.0.1<br>2022-06-21 |
 | [localtunnel](https://theboroer.github.io/localtunnel-www/) | Expose your localhost to the world for easy testing and sharing | `lt` | 2.0.2<br>2021-09-18 |
-| [npkg](https://github.com/cutenode/npkg) | Inspect packages from the npm registry from the terminal | `npkg` | 0.0.6<br>2011-10-04 |
+| [npkg](https://github.com/wearefractal/npkg) | Legacy installer generator for Node.js applications; requires tar, Java, and Python to build installers, and Java to run them | `npkg` | 0.0.6<br>2011-10-04 |
 | [serve](https://github.com/vercel/serve) | Static file serving and directory listing | `serve` | 14.2.6<br>2026-03-03 |
 
 
@@ -532,6 +532,18 @@ Kill whatever process is listening on port 3000
 
 ```sh
 bunx kill-port 3000
+```
+
+</details>
+
+
+<details>
+<summary>npkg examples</summary>
+
+Generate installers from an application directory containing package.json; legacy tool, current-platform compatibility is unverified
+
+```sh
+bunx npkg ./my-app ./installers
 ```
 
 </details>
