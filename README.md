@@ -58,9 +58,9 @@ Inspired by <a href="https://github.com/carlosferreyra/awesome-uvx">awesome-uvx<
 |:-----|:------------|:--------------|:--------------|
 | [esbuild](https://esbuild.github.io/) | Extremely fast JavaScript and CSS bundler and minifier | `esbuild` | 0.28.2<br>2026-08-08 |
 | [parcel](https://parceljs.org/) | Zero-configuration build tool for the web | `parcel` | 2.16.4<br>2026-02-02 |
-| [rollup](https://rollupjs.org/) | Next-generation module bundler for JavaScript libraries | `rollup` | 4.67.4<br>2026-11-01 |
+| [rollup](https://rollupjs.org/) | Next-generation module bundler for JavaScript libraries | `rollup` | 4.68.2<br>2026-11-09 |
 | [tsup](https://tsup.egoist.dev/) | Bundle TypeScript libraries with zero config, powered by esbuild | `tsup` | 9.0.0<br>2026-10-14 |
-| [vite](https://vitejs.dev/) | Next generation frontend tooling — instant dev server and optimized builds | `vite` | 8.3.5<br>2026-10-21 |
+| [vite](https://vitejs.dev/) | Next generation frontend tooling — instant dev server and optimized builds | `vite` | 8.3.7<br>2026-11-09 |
 
 
 <details>
@@ -100,9 +100,9 @@ bunx vite build
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [@biomejs/biome](https://biomejs.dev/) | Fast formatter and linter for JavaScript, TypeScript, JSON and more | `biome` | 2.6.4<br>2026-10-28 |
+| [@biomejs/biome](https://biomejs.dev/) | Fast formatter and linter for JavaScript, TypeScript, JSON and more | `biome` | 2.6.6<br>2026-11-06 |
 | [eslint](https://eslint.org/) | Pluggable static analyzer for JavaScript and TypeScript | `eslint` | 10.14.0<br>2026-10-30 |
-| [oxlint](https://oxc.rs/docs/guide/usage/linter.html) | Fast JavaScript/TypeScript linter written in Rust | `oxlint` | 1.90.0<br>2026-10-27 |
+| [oxlint](https://oxc.rs/docs/guide/usage/linter.html) | Fast JavaScript/TypeScript linter written in Rust | `oxlint` | 1.93.0<br>2026-11-09 |
 | [prettier](https://prettier.io/) | Opinionated code formatter supporting many languages | `prettier` | 3.9.10<br>2026-10-10 |
 | [standard](https://standardjs.com/) | JavaScript style guide, linter, and formatter — zero config | `standard` | 17.1.2<br>2024-09-13 |
 
@@ -138,11 +138,11 @@ bunx prettier --write .
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [@tailwindcss/cli](https://tailwindcss.com/docs/installation/tailwind-cli) | Compile Tailwind CSS stylesheets with the official CLI | `tailwindcss` | 4.3.3<br>2026-07-16 |
+| [@tailwindcss/cli](https://tailwindcss.com/docs/installation/tailwind-cli) | Compile Tailwind CSS stylesheets with the official CLI | `tailwindcss` | 4.3.5<br>2026-11-06 |
 | [autoprefixer](https://github.com/postcss/autoprefixer) | PostCSS plugin to parse CSS and add vendor prefixes | `autoprefixer` | 10.6.2<br>2026-10-26 |
 | [postcss-cli](https://github.com/postcss/postcss-cli) | Command line interface for PostCSS | `postcss` | 12.0.0<br>2026-09-04 |
-| [sass](https://sass-lang.com/) | Reference implementation of Sass written in Dart | `sass` | 1.107.1<br>2026-10-30 |
-| [stylelint](https://stylelint.io/) | Modern, powerful linter that helps you avoid errors and enforce CSS conventions | `stylelint` | 17.16.0<br>2026-10-01 |
+| [sass](https://sass-lang.com/) | Reference implementation of Sass written in Dart | `sass` | 1.108.1<br>2026-11-07 |
+| [stylelint](https://stylelint.io/) | Modern, powerful linter that helps you avoid errors and enforce CSS conventions | `stylelint` | 18.0.0<br>2026-11-03 |
 
 
 <details>
@@ -178,7 +178,7 @@ bunx sass input.scss output.css
 |:-----|:------------|:--------------|:--------------|
 | [drizzle-kit](https://orm.drizzle.team/) | CLI companion for Drizzle ORM — migrations and schema management | `drizzle-kit` | 0.31.11<br>2026-09-21 |
 | [knex](https://knexjs.org/) | SQL query builder and migration tool for Node.js | `knex` | 3.3.0<br>2026-06-26 |
-| [prisma](https://www.prisma.io/) | Next-generation Node.js and TypeScript ORM with a migration CLI | `prisma` | 8.0.0-rc.29<br>2026-10-30 |
+| [prisma](https://www.prisma.io/) | Next-generation Node.js and TypeScript ORM with a migration CLI | `prisma` | 8.0.0-rc.33<br>2026-11-06 |
 | [sequelize-cli](https://github.com/sequelize/cli) | Command-line interface for Sequelize ORM | `sequelize` | 6.6.5<br>2026-01-05 |
 
 
@@ -207,12 +207,12 @@ bunx prisma migrate dev
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [firebase-tools](https://github.com/firebase/firebase-tools) | Firebase command-line interface | `firebase` | 15.34.2<br>2026-10-28 |
-| [netlify-cli](https://docs.netlify.com/cli/get-started/) | Netlify command-line tool for local development and deployment | `netlify`, `ntl` | 27.16.2<br>2026-11-02 |
+| [firebase-tools](https://github.com/firebase/firebase-tools) | Firebase command-line interface | `firebase` | 15.35.0<br>2026-11-04 |
+| [netlify-cli](https://docs.netlify.com/cli/get-started/) | Netlify command-line tool for local development and deployment | `netlify`, `ntl` | 27.16.3<br>2026-11-09 |
 | [serverless](https://www.serverless.com/) | Build and deploy serverless applications to any cloud | `serverless`, `sls` | 4.46.0<br>2026-10-28 |
 | [sst](https://sst.dev/) | Build full-stack apps on your own infrastructure | `sst` | 4.17.2<br>2026-10-08 |
-| [vercel](https://vercel.com/docs/cli) | Deploy and manage projects on the Vercel platform | `vercel`, `vc` | 65.9.0<br>2026-10-31 |
-| [wrangler](https://developers.cloudflare.com/workers/wrangler/) | Command-line tool for building with Cloudflare Workers and Pages | `wrangler` | 4.156.1<br>2026-11-01 |
+| [vercel](https://vercel.com/docs/cli) | Deploy and manage projects on the Vercel platform | `vercel`, `vc` | 65.12.1<br>2026-11-06 |
+| [wrangler](https://developers.cloudflare.com/workers/wrangler/) | Command-line tool for building with Cloudflare Workers and Pages | `wrangler` | 4.159.0<br>2026-11-09 |
 
 
 <details>
@@ -234,7 +234,7 @@ bunx vercel
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [concurrently](https://github.com/open-cli-tools/concurrently) | Run multiple commands concurrently, with prefixed output | `concurrently` | 10.0.6<br>2026-10-08 |
+| [concurrently](https://github.com/open-cli-tools/concurrently) | Run multiple commands concurrently, with prefixed output | `concurrently` | 10.0.7<br>2026-11-07 |
 | [cross-env](https://github.com/kentcdodds/cross-env) | Cross-platform utility for setting environment variables | `cross-env`, `cross-env-shell` | 10.1.0<br>2025-09-29 |
 | [dotenv-cli](https://github.com/entropitor/dotenv-cli) | Run a command with environment variables loaded from a .env file | `dotenv` | 11.1.0<br>2026-10-28 |
 | [nodemon](https://nodemon.io/) | Automatically restart a Node.js app when files change | `nodemon` | 3.1.14<br>2026-02-20 |
@@ -248,7 +248,7 @@ bunx vercel
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [@11ty/eleventy](https://www.11ty.dev/) | Simpler static site generator | `eleventy` | 3.1.7<br>2026-10-15 |
+| [@11ty/eleventy](https://www.11ty.dev/) | Simpler static site generator | `eleventy` | 3.1.8<br>2026-11-03 |
 | [typedoc](https://typedoc.org/) | API documentation generator for TypeScript projects | `typedoc` | 0.28.20<br>2026-07-05 |
 | [vitepress](https://vitepress.dev/) | Vite-powered static site generator for technical documentation | `vitepress` | 1.6.4<br>2025-08-05 |
 
@@ -284,12 +284,12 @@ bunx vitepress init
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [astro](https://astro.build/) | All-in-one web framework for content-driven sites | `astro` | 7.4.5<br>2026-11-02 |
+| [astro](https://astro.build/) | All-in-one web framework for content-driven sites | `astro` | 7.4.8<br>2026-11-09 |
 | [create-astro](https://docs.astro.build/en/install-and-setup/) | Scaffold a new Astro project | `create-astro` | 5.3.1<br>2026-10-21 |
-| [next](https://nextjs.org/) | The React Framework for production-grade applications | `next` | 16.4.4<br>2026-11-02 |
-| [nuxi](https://nuxt.com/docs/api/commands/) | Command-line interface for the Nuxt framework | `nuxi` | 4.0.1<br>2026-10-09 |
-| [storybook](https://storybook.js.org/) | Build and document UI components in isolation | `storybook` | 10.6.5<br>2026-10-27 |
-| [sv](https://svelte.dev/docs/cli/overview) | Official Svelte CLI — scaffold and manage SvelteKit projects | `sv` | 1.2.0<br>2026-10-31 |
+| [next](https://nextjs.org/) | The React Framework for production-grade applications | `next` | 16.4.5<br>2026-11-03 |
+| [nuxi](https://nuxt.com/docs/api/commands/) | Command-line interface for the Nuxt framework | `nuxi` | 4.0.3<br>2026-11-03 |
+| [storybook](https://storybook.js.org/) | Build and document UI components in isolation | `storybook` | 10.6.6<br>2026-11-05 |
+| [sv](https://svelte.dev/docs/cli/overview) | Official Svelte CLI — scaffold and manage SvelteKit projects | `sv` | 1.3.0<br>2026-11-04 |
 
 
 <details>
@@ -311,7 +311,7 @@ bunx sv create my-app
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [knip](https://knip.dev/) | Find unused dependencies, files, and exports in JavaScript and TypeScript projects | `knip`, `knip-bun` | 6.44.1<br>2026-10-31 |
+| [knip](https://knip.dev/) | Find unused dependencies, files, and exports in JavaScript and TypeScript projects | `knip`, `knip-bun` | 6.44.2<br>2026-11-07 |
 | [npkill](https://npkill.js.org/) | Find and remove node_modules directories to free disk space | `npkill` | 0.12.2<br>2024-06-08 |
 | [npm-check](https://github.com/dylang/npm-check) | Check for outdated, incorrect and unused dependencies | `npm-check` | 6.0.1<br>2022-07-16 |
 | [npm-check-updates](https://github.com/raineorshine/npm-check-updates) | Upgrade package.json dependencies to the latest versions | `ncu`, `npm-check-updates` | 23.1.1<br>2026-10-10 |
@@ -362,8 +362,8 @@ bunx publint ./packages/my-library
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [@openapitools/openapi-generator-cli](https://openapi-generator.tech/) | Generate API clients, server stubs, and documentation from OpenAPI specs | `openapi-generator-cli` | 2.42.0<br>2026-10-20 |
-| [@redocly/cli](https://redocly.com/docs/cli/) | Lint and bundle OpenAPI descriptions with configurable validation rules | `openapi`, `redocly` | 2.72.1<br>2026-10-29 |
+| [@openapitools/openapi-generator-cli](https://openapi-generator.tech/) | Generate API clients, server stubs, and documentation from OpenAPI specs | `openapi-generator-cli` | 2.42.1<br>2026-11-09 |
+| [@redocly/cli](https://redocly.com/docs/cli/) | Lint and bundle OpenAPI descriptions with configurable validation rules | `openapi`, `redocly` | 2.77.0<br>2026-11-09 |
 | [json-server](https://github.com/typicode/json-server) | Full fake REST API with zero coding in seconds | `json-server` | 1.0.0-beta.15<br>2026-03-23 |
 | [newman](https://github.com/postmanlabs/newman) | Command-line collection runner for Postman | `newman` | 6.2.3<br>2026-10-09 |
 
@@ -405,9 +405,9 @@ bunx --package @redocly/cli redocly bundle openapi.yml -o bundled.yml
 
 | Name | Description | Executable(s) | Latest Release |
 |:-----|:------------|:--------------|:--------------|
-| [create-next-app](https://nextjs.org/docs/api-reference/create-next-app) | Scaffold a new Next.js application with one command | `create-next-app` | 16.4.4<br>2026-11-02 |
+| [create-next-app](https://nextjs.org/docs/api-reference/create-next-app) | Scaffold a new Next.js application with one command | `create-next-app` | 16.4.5<br>2026-11-03 |
 | [create-t3-app](https://create.t3.gg/) | Interactive CLI to start a typesafe Next.js app (the T3 Stack) | `create-t3-app` | 7.40.0<br>2025-11-05 |
-| [create-vite](https://vitejs.dev/guide/) | Scaffold a new Vite project from an interactive prompt | `create-vite` | 9.3.3<br>2026-10-27 |
+| [create-vite](https://vitejs.dev/guide/) | Scaffold a new Vite project from an interactive prompt | `create-vite` | 9.3.4<br>2026-11-05 |
 | [degit](https://github.com/Rich-Harris/degit) | Straightforward project scaffolding via git repository cloning | `degit` | 3.10.1<br>2026-10-21 |
 | [plop](https://plopjs.com/) | Micro-generator framework for consistent code scaffolding | `plop` | 4.0.5<br>2026-01-22 |
 
@@ -433,7 +433,7 @@ bunx create-next-app@latest my-app
 |:-----|:------------|:--------------|:--------------|
 | [audit-ci](https://github.com/IBM/audit-ci) | Audit dependencies in CI and fail on high-severity vulnerabilities | `audit-ci` | 7.1.0<br>2024-07-03 |
 | [retire](https://retirejs.github.io/retire.js/) | Scanner detecting the use of JavaScript libraries with known vulnerabilities | `retire` | 6.1.0<br>2026-10-06 |
-| [snyk](https://snyk.io/) | Find, fix, and monitor vulnerabilities in open source dependencies | `snyk` | 1.1308.3<br>2026-10-23 |
+| [snyk](https://snyk.io/) | Find, fix, and monitor vulnerabilities in open source dependencies | `snyk` | 1.1308.4<br>2026-11-04 |
 
 
 
@@ -446,8 +446,8 @@ bunx create-next-app@latest my-app
 | [cypress](https://www.cypress.io/) | End-to-end testing framework for anything that runs in a browser | `cypress` | 16.2.1<br>2026-10-28 |
 | [jest](https://jestjs.io/) | Delightful JavaScript testing framework with a focus on simplicity | `jest` | 30.5.2<br>2026-09-18 |
 | [mocha](https://mochajs.org/) | Feature-rich JavaScript test framework running on Node.js | `mocha` | 12.0.3<br>2026-10-01 |
-| [playwright](https://playwright.dev/) | Reliable end-to-end testing across all modern browsers | `playwright` | 1.64.1<br>2026-10-14 |
-| [vitest](https://vitest.dev/) | Blazing fast unit-test framework powered by Vite | `vitest` | 5.0.5<br>2026-10-15 |
+| [playwright](https://playwright.dev/) | Reliable end-to-end testing across all modern browsers | `playwright` | 1.65.0<br>2026-11-05 |
+| [vitest](https://vitest.dev/) | Blazing fast unit-test framework powered by Vite | `vitest` | 5.1.0<br>2026-11-02 |
 
 
 <details>
@@ -496,7 +496,7 @@ bunx --package typescript tsc --init
 | [clinic](https://clinicjs.org/) | Diagnose Node.js performance issues with flame graphs and heap analysis | `clinic` | 13.0.0<br>2023-06-28 |
 | [lighthouse](https://developer.chrome.com/docs/lighthouse/overview) | Automated tool for improving quality of web pages | `lighthouse`, `chrome-debug`, `smokehouse` | 13.6.0<br>2026-10-27 |
 | [size-limit](https://github.com/ai/size-limit) | Keep your JavaScript and CSS bundle size small | `size-limit` | 14.3.0<br>2026-10-22 |
-| [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) | Visualize the size of webpack output files with an interactive treemap | `webpack-bundle-analyzer` | 5.4.1<br>2026-11-02 |
+| [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) | Visualize the size of webpack output files with an interactive treemap | `webpack-bundle-analyzer` | 5.4.2<br>2026-11-06 |
 
 
 <details>
@@ -522,7 +522,7 @@ bunx lighthouse https://example.com --view
 | [kill-port](https://github.com/tiaanduplessis/kill-port) | Kill the process bound to a given port | `kill-port` | 2.0.1<br>2022-06-21 |
 | [localtunnel](https://theboroer.github.io/localtunnel-www/) | Expose your localhost to the world for easy testing and sharing | `lt` | 2.0.2<br>2021-09-18 |
 | [npkg](https://github.com/wearefractal/npkg) | Legacy installer generator for Node.js applications; requires tar, Java, and Python to build installers, and Java to run them | `npkg` | 0.0.6<br>2011-10-04 |
-| [serve](https://github.com/vercel/serve) | Static file serving and directory listing | `serve` | 14.2.6<br>2026-03-03 |
+| [serve](https://github.com/vercel/serve) | Static file serving and directory listing | `serve` | 14.2.7<br>2026-11-06 |
 
 
 <details>
