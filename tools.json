@@ -34,8 +34,8 @@
           "execs": [
             "rollup"
           ],
-          "version": "4.68.4",
-          "last_release": "2026-11-16"
+          "version": "4.68.8",
+          "last_release": "2026-11-21"
         },
         "tsup": {
           "description": "Bundle TypeScript libraries with zero config, powered by esbuild",
@@ -101,8 +101,8 @@
           "execs": [
             "oxlint"
           ],
-          "version": "1.94.0",
-          "last_release": "2026-11-16"
+          "version": "1.95.0",
+          "last_release": "2026-11-23"
         },
         "prettier": {
           "description": "Opinionated code formatter supporting many languages",
@@ -140,8 +140,8 @@
           "execs": [
             "autoprefixer"
           ],
-          "version": "10.6.2",
-          "last_release": "2026-10-26"
+          "version": "10.7.0",
+          "last_release": "2026-11-19"
         },
         "postcss-cli": {
           "description": "Command line interface for PostCSS",
@@ -173,8 +173,8 @@
           "execs": [
             "stylelint"
           ],
-          "version": "18.0.0",
-          "last_release": "2026-11-03"
+          "version": "18.1.0",
+          "last_release": "2026-11-20"
         },
         "@tailwindcss/cli": {
           "description": "Compile Tailwind CSS stylesheets with the official CLI",
@@ -231,8 +231,8 @@
               "description": "Create and apply a new development migration"
             }
           ],
-          "version": "8.0.0-rc.33",
-          "last_release": "2026-11-06"
+          "version": "8.0.0-rc.35",
+          "last_release": "2026-11-23"
         },
         "sequelize-cli": {
           "description": "Command-line interface for Sequelize ORM",
@@ -255,8 +255,8 @@
           "execs": [
             "firebase"
           ],
-          "version": "15.36.0",
-          "last_release": "2026-11-11"
+          "version": "15.37.0",
+          "last_release": "2026-11-18"
         },
         "netlify-cli": {
           "description": "Netlify command-line tool for local development and deployment",
@@ -265,8 +265,8 @@
             "netlify",
             "ntl"
           ],
-          "version": "27.19.0",
-          "last_release": "2026-11-13"
+          "version": "27.20.1",
+          "last_release": "2026-11-19"
         },
         "serverless": {
           "description": "Build and deploy serverless applications to any cloud",
@@ -300,8 +300,8 @@
               "description": "Deploy the current directory to a preview URL"
             }
           ],
-          "version": "65.16.0",
-          "last_release": "2026-11-14"
+          "version": "66.6.0",
+          "last_release": "2026-11-20"
         },
         "wrangler": {
           "description": "Command-line tool for building with Cloudflare Workers and Pages",
@@ -309,8 +309,8 @@
           "execs": [
             "wrangler"
           ],
-          "version": "4.163.0",
-          "last_release": "2026-11-16"
+          "version": "4.166.0",
+          "last_release": "2026-11-20"
         }
       }
     },
@@ -423,8 +423,8 @@
           "execs": [
             "astro"
           ],
-          "version": "7.4.12",
-          "last_release": "2026-11-13"
+          "version": "7.4.13",
+          "last_release": "2026-11-18"
         },
         "create-astro": {
           "description": "Scaffold a new Astro project",
@@ -450,8 +450,8 @@
           "execs": [
             "nuxi"
           ],
-          "version": "4.0.3",
-          "last_release": "2026-11-03"
+          "version": "4.1.0",
+          "last_release": "2026-11-22"
         },
         "sv": {
           "description": "Official Svelte CLI — scaffold and manage SvelteKit projects",
@@ -465,8 +465,8 @@
               "description": "Create a new SvelteKit project"
             }
           ],
-          "version": "1.4.0",
-          "last_release": "2026-11-14"
+          "version": "1.7.0",
+          "last_release": "2026-11-20"
         },
         "storybook": {
           "description": "Build and document UI components in isolation",
@@ -474,8 +474,8 @@
           "execs": [
             "storybook"
           ],
-          "version": "10.6.7",
-          "last_release": "2026-11-10"
+          "version": "10.6.8",
+          "last_release": "2026-11-20"
         }
       }
     },
@@ -539,8 +539,8 @@
               "description": "Analyze an existing project for unused dependencies; requires a supported Node 20.19+/22.12+ version"
             }
           ],
-          "version": "6.45.1",
-          "last_release": "2026-11-11"
+          "version": "6.48.0",
+          "last_release": "2026-11-22"
         },
         "publint": {
           "description": "Check npm package exports and published files for compatibility problems",
@@ -575,8 +575,8 @@
               "description": "Generate a TypeScript Axios client from an OpenAPI spec"
             }
           ],
-          "version": "2.42.2",
-          "last_release": "2026-11-11"
+          "version": "2.43.0",
+          "last_release": "2026-11-22"
         },
         "json-server": {
           "description": "Full fake REST API with zero coding in seconds",
@@ -613,8 +613,8 @@
               "description": "Bundle an OpenAPI description and its referenced files"
             }
           ],
-          "version": "2.79.0",
-          "last_release": "2026-11-16"
+          "version": "2.82.0",
+          "last_release": "2026-11-19"
         }
       }
     },
@@ -703,8 +703,8 @@
           "execs": [
             "snyk"
           ],
-          "version": "1.1308.4",
-          "last_release": "2026-11-04"
+          "version": "1.1309.0",
+          "last_release": "2026-11-19"
         }
       }
     },
@@ -760,8 +760,8 @@
           "execs": [
             "vitest"
           ],
-          "version": "5.1.0",
-          "last_release": "2026-11-02"
+          "version": "5.1.1",
+          "last_release": "2026-11-18"
         }
       }
     },
@@ -956,8 +956,8 @@
           "execs": [
             "lint-staged"
           ],
-          "version": "17.6.1",
-          "last_release": "2026-11-15"
+          "version": "17.6.2",
+          "last_release": "2026-11-22"
         },
         "semantic-release": {
           "description": "Fully automated version management and package publishing",
